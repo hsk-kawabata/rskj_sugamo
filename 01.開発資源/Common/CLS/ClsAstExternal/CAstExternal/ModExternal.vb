@@ -30,6 +30,8 @@ Public Module ModExternal
     '2018/08/09 saitou 広島信金 DEL ---------------------------------------- END
 #End Region
 
+    Public gstrUSER_ID As String = String.Empty
+
     ''' <summary>
     ''' 口振・総振のスケジュールマスタ(追加情報)の作成処理を行います。
     ''' </summary>
@@ -834,6 +836,89 @@ Public Module ModExternal
 
     'End Sub
     '2018/08/09 saitou 広島信金 DEL ---------------------------------------- END
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="BKCode">金融機関コード</param>
+    ''' <param name="BRCode">支店コード</param>
+    ''' <param name="Kin_KName">金融機関カナ名</param>
+    ''' <param name="Sit_KName">支店カナ名</param>
+    ''' <param name="Kin_NName">金融機関名</param>
+    ''' <param name="Sit_NName">支店名</param>
+    ''' <returns>True：データあり、False：該当データなし</returns>
+    Public Function Ex_GetTenMast(ByVal BKCode As String,
+                                  ByVal BRCode As String,
+                                  ByRef Kin_KName As String,
+                                  ByRef Sit_KName As String,
+                                  Optional ByRef Kin_NName As String = Nothing,
+                                  Optional ByRef Sit_NName As String = Nothing) As Boolean
+
+        Dim GCom As New MenteCommon.clsCommon
+        Dim SQL As New StringBuilder(128)
+        Dim MainDB As CASTCommon.MyOracle = Nothing
+        Dim OraReader As CASTCommon.MyOracleReader = Nothing
+
+        Try
+
+            SQL.Length = 0
+            SQL.Append("SELECT")
+            SQL.Append("     KIN_KNAME_N")
+            SQL.Append("   , KIN_NNAME_N")
+            SQL.Append("   , SIT_KNAME_N")
+            SQL.Append("   , SIT_NNAME_N")
+            SQL.Append(" FROM")
+            SQL.Append("     TENMAST")
+            SQL.Append(" WHERE")
+            SQL.Append("     KIN_NO_N = " & SQ(BKCode))
+            SQL.Append(" AND SIT_NO_N = " & SQ(BRCode))
+            SQL.Append(" AND ROWNUM   = 1")
+
+            MainDB = New CASTCommon.MyOracle
+            OraReader = New CASTCommon.MyOracleReader(MainDB)
+            If OraReader.DataReader(SQL) = False Then
+                Kin_KName = ""
+                Sit_KName = ""
+                If Not Kin_NName Is Nothing Then
+                    Kin_NName = ""
+                End If
+                If Not Sit_NName Is Nothing Then
+                    Sit_NName = ""
+                End If
+                Return False
+            Else
+                Kin_KName = GCom.NzStr(OraReader.GetItem("KIN_KNAME_N")).Trim
+                Sit_KName = GCom.NzStr(OraReader.GetItem("SIT_KNAME_N")).Trim
+                If Not Kin_NName Is Nothing Then
+                    Kin_NName = GCom.NzStr(OraReader.GetItem("KIN_NNAME_N")).Trim
+                End If
+                If Not Sit_NName Is Nothing Then
+                    Sit_NName = GCom.NzStr(OraReader.GetItem("SIT_NNAME_N")).Trim
+                End If
+                Return True
+            End If
+
+        Catch ex As Exception
+            Kin_KName = ""
+            Sit_KName = ""
+            If Not Kin_NName Is Nothing Then
+                Kin_NName = ""
+            End If
+            If Not Sit_NName Is Nothing Then
+                Sit_NName = ""
+            End If
+            Return False
+        Finally
+            If Not OraReader Is Nothing Then
+                OraReader.Close()
+                OraReader = Nothing
+            End If
+            If Not MainDB Is Nothing Then
+                MainDB.Close()
+                MainDB = Nothing
+            End If
+        End Try
+    End Function
 
 #Region " 拡張用関数 "
 

@@ -46,15 +46,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAstCommon, Version=1.0.6138.24192, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="CAstCommon, Version=1.0.7250.36432, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\DLL\CAstCommon.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="CAstExtendPrint, Version=1.0.7250.30522, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\DLL\CAstExtendPrint.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstFormat, Version=1.0.7250.36432, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLL\CAstFormat.dll</HintPath>
     </Reference>
     <Reference Include="CAstReports, Version=1.0.6144.25643, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -106,6 +109,31 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Print.vb" />
+    <Compile Include="ツリー\ItakuTreeView.designer.vb">
+      <DependentUpon>ItakuTreeView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ツリー\ItakuTreeView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="総合振込\M_SOUFURI.vb" />
+    <Compile Include="総合振込\マスタ管理\KFSMAST010C.designer.vb">
+      <DependentUpon>KFSMAST010C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="総合振込\マスタ管理\KFSMAST010C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="総合振込\日常業務\KFSMAIN200C.designer.vb">
+      <DependentUpon>KFSMAIN200C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="総合振込\日常業務\KFSMAIN200C.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="総合振込\日常業務\KFSMAIN210C.designer.vb">
+      <DependentUpon>KFSMAIN210C.vb</DependentUpon>
+    </Compile>
+    <Compile Include="総合振込\日常業務\KFSMAIN210C.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmProgress.resx">
@@ -116,6 +144,18 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ツリー\ItakuTreeView.resx">
+      <DependentUpon>ItakuTreeView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="総合振込\マスタ管理\KFSMAST010C.resx">
+      <DependentUpon>KFSMAST010C.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="総合振込\日常業務\KFSMAIN200C.resx">
+      <DependentUpon>KFSMAIN200C.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="総合振込\日常業務\KFSMAIN210C.resx">
+      <DependentUpon>KFSMAIN210C.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -129,24 +169,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="WEB伝送\" />
-    <Folder Include="媒体変換\" />
-    <Folder Include="学校自振\" />
-    <Folder Include="帳票印刷\WEB伝送\" />
-    <Folder Include="帳票印刷\企業自振\" />
-    <Folder Include="帳票印刷\学校諸会費\" />
-    <Folder Include="帳票印刷\総合振込\" />
-    <Folder Include="帳票印刷\資金決済\" />
-    <Folder Include="帳票印刷\運用管理\" />
-    <Folder Include="総給振管理\" />
-    <Folder Include="自振管理\" />
-    <Folder Include="資金決済\" />
-    <Folder Include="運用管理\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(tagetdir)$(targetfilename) "D:\RS企業自振_V2.0\01.開発資源\EXE"</PostBuildEvent>
+    <PostBuildEvent>copy $(tagetdir)$(targetfilename)  ..\EXE
+REM copy $(tagetdir)$(targetfilename) "D:\RS企業自振_V2.0\01.開発資源\EXE"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
