@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8839AADB-1C11-413E-8B61-0AA31BBB82AF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>small_icon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SSS</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>SSS</RootNamespace>
+    <StartupObject>SSS.My.MyApplication</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsForms</MyType>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\EXE\</OutputPath>
+    <DocumentationFile>SSS.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\EXE\</OutputPath>
+    <DocumentationFile>SSS.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CAstCommon">
+      <Name>CAstCommon</Name>
+      <HintPath>..\..\DLL\CAstCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstExtendPrint, Version=1.0.5829.23872, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstExtendPrint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstExternal, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstExternal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstReports">
+      <Name>CAstReports</Name>
+      <HintPath>..\..\DLL\CAstReports.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="clsMenteCommon">
+      <Name>clsMenteCommon</Name>
+      <HintPath>..\..\DLL\clsMenteCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KF3SMENU010.Designer.vb">
+      <DependentUpon>KF3SMENU010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SMENU010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SMAIN010.designer.vb">
+      <DependentUpon>KF3SMAIN010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SMAIN010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SMAIN020.Designer.vb">
+      <DependentUpon>KF3SMAIN020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SMAIN020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SMAIN030.Designer.vb">
+      <DependentUpon>KF3SMAIN030.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SMAIN030.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SPRNT010.Designer.vb">
+      <DependentUpon>KF3SPRNT010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SPRNT010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SPRNT020.Designer.vb">
+      <DependentUpon>KF3SPRNT020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SPRNT020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SPRNT030.Designer.vb">
+      <DependentUpon>KF3SPRNT030.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SPRNT030.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KF3SPRNT040.Designer.vb">
+      <DependentUpon>KF3SPRNT040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KF3SPRNT040.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="M_SSS.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="small_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KF3SMENU010.resx">
+      <DependentUpon>KF3SMENU010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SMAIN010.resx">
+      <DependentUpon>KF3SMAIN010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SMAIN020.resx">
+      <DependentUpon>KF3SMAIN020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SMAIN030.resx">
+      <DependentUpon>KF3SMAIN030.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SPRNT010.resx">
+      <DependentUpon>KF3SPRNT010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SPRNT020.resx">
+      <DependentUpon>KF3SPRNT020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SPRNT030.resx">
+      <DependentUpon>KF3SPRNT030.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KF3SPRNT040.resx">
+      <DependentUpon>KF3SPRNT040.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

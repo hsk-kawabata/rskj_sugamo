@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BB1FE5F-D09E-4FEA-8496-8ADB6E4B092A}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>small_icon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GAKKOU</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>GAKKOU</RootNamespace>
+    <StartupObject>GAKKOU.My.MyApplication</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsForms</MyType>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\EXE\</OutputPath>
+    <DocumentationFile>GAKKOU.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355,40000</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\EXE\</OutputPath>
+    <DocumentationFile>GAKKOU.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355,40000</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.PowerSORT_Lib, Version=3.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\05.外部DLL\AxInterop.PowerSORT_Lib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstCommon, Version=1.0.3586.32961, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLL\CAstCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstExtendPrint, Version=1.0.5829.23872, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLL\CAstExtendPrint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstExternal, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLL\CAstExternal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstReports, Version=1.0.3586.32963, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLL\CAstReports.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="clsMenteCommon, Version=1.0.4149.19254, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLL\clsMenteCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>system.data.oracleclient</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="その他\KFGOTHR010.Designer.vb">
+      <DependentUpon>KFGOTHR010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="その他\KFGOTHR020.Designer.vb">
+      <DependentUpon>KFGOTHR020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="その他\KFGOTHR090.Designer.vb">
+      <DependentUpon>KFGOTHR090.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST010.Designer.vb">
+      <DependentUpon>KFGMAST010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST011.Designer.vb">
+      <DependentUpon>KFGMAST011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST020.Designer.vb">
+      <DependentUpon>KFGMAST020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST021.Designer.vb">
+      <DependentUpon>KFGMAST021.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST030.Designer.vb">
+      <DependentUpon>KFGMAST030.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST040.Designer.vb">
+      <DependentUpon>KFGMAST040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST041.Designer.vb">
+      <DependentUpon>KFGMAST041.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST050.Designer.vb">
+      <DependentUpon>KFGMAST050.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST060.Designer.vb">
+      <DependentUpon>KFGMAST060.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST070.Designer.vb">
+      <DependentUpon>KFGMAST070.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST100.Designer.vb">
+      <DependentUpon>KFGMAST100.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST110.Designer.vb">
+      <DependentUpon>KFGMAST110.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST120.Designer.vb">
+      <DependentUpon>KFGMAST120.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST510.Designer.vb">
+      <DependentUpon>KFGMAST510.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST510.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST520.designer.vb">
+      <DependentUpon>KFGMAST520.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST520.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST530.designer.vb">
+      <DependentUpon>KFGMAST530.vb</DependentUpon>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST530.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGP035.vb" />
+    <Compile Include="マスタ管理\KFGP006.vb" />
+    <Compile Include="マスタ管理\KFGP007.vb" />
+    <Compile Include="マスタ管理\KFGP008.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="PanelGakkou.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustamDataGridView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGP106.vb" />
+    <Compile Include="マスタ管理\KFGP107.vb" />
+    <Compile Include="マスタ管理\KFGP108.vb" />
+    <Compile Include="メニュー\KFGMENU010.Designer.vb">
+      <DependentUpon>KFGMENU010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT010.Designer.vb">
+      <DependentUpon>KFGPRNT010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT020.Designer.vb">
+      <DependentUpon>KFGPRNT020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT030.Designer.vb">
+      <DependentUpon>KFGPRNT030.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT040.Designer.vb">
+      <DependentUpon>KFGPRNT040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT050.Designer.vb">
+      <DependentUpon>KFGPRNT050.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT060.Designer.vb">
+      <DependentUpon>KFGPRNT060.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT070.Designer.vb">
+      <DependentUpon>KFGPRNT070.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT080.Designer.vb">
+      <DependentUpon>KFGPRNT080.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT090.Designer.vb">
+      <DependentUpon>KFGPRNT090.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT100.Designer.vb">
+      <DependentUpon>KFGPRNT100.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT100.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT110.Designer.vb">
+      <DependentUpon>KFGPRNT110.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT110.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT120.Designer.vb">
+      <DependentUpon>KFGPRNT120.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT120.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT130.Designer.vb">
+      <DependentUpon>KFGPRNT130.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT130.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT090.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT080.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT060.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT070.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT030.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT040.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT050.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT140.Designer.vb">
+      <DependentUpon>KFGPRNT140.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT140.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT150.Designer.vb">
+      <DependentUpon>KFGPRNT150.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT150.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT160.designer.vb">
+      <DependentUpon>KFGPRNT160.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT160.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT170.Designer.vb">
+      <DependentUpon>KFGPRNT170.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT170.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT180.Designer.vb">
+      <DependentUpon>KFGPRNT180.vb</DependentUpon>
+    </Compile>
+    <Compile Include="帳票印刷\KFGPRNT180.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ010.Designer.vb">
+      <DependentUpon>KFGNENJ010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ020.Designer.vb">
+      <DependentUpon>KFGNENJ020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ021.Designer.vb">
+      <DependentUpon>KFGNENJ021.vb</DependentUpon>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ040.Designer.vb">
+      <DependentUpon>KFGNENJ040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ040.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="年次処理\KFGP036.vb" />
+    <Compile Include="日常業務\KFGMAIN010.Designer.vb">
+      <DependentUpon>KFGMAIN010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN030.Designer.vb">
+      <DependentUpon>KFGMAIN030.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN030.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN031.Designer.vb">
+      <DependentUpon>KFGMAIN031.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN031.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN040.Designer.vb">
+      <DependentUpon>KFGMAIN040.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN040.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN050.Designer.vb">
+      <DependentUpon>KFGMAIN050.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN050.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN060.Designer.vb">
+      <DependentUpon>KFGMAIN060.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN060.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN070.Designer.vb">
+      <DependentUpon>KFGMAIN070.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN070.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN071.Designer.vb">
+      <DependentUpon>KFGMAIN071.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN071.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN072.Designer.vb">
+      <DependentUpon>KFGMAIN072.vb</DependentUpon>
+    </Compile>
+    <Compile Include="日常業務\KFGMAIN072.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\ClsSchduleMaintenance.vb" />
+    <Compile Include="マスタ管理\KFGMAST020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST021.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST030.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST040.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST041.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST050.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST060.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST070.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST100.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST110.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="マスタ管理\KFGMAST120.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="その他\KFGOTHR010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="その他\KFGOTHR020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="その他\KFGOTHR090.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="年次処理\KFGNENJ021.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="メニュー\KFGMENU010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="マスタ管理\KFGMAST011.resx">
+      <DependentUpon>KFGMAST011.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST510.resx">
+      <DependentUpon>KFGMAST510.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST520.resx">
+      <DependentUpon>KFGMAST520.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST530.resx">
+      <DependentUpon>KFGMAST530.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT100.resx">
+      <DependentUpon>KFGPRNT100.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT110.resx">
+      <DependentUpon>KFGPRNT110.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT120.resx">
+      <DependentUpon>KFGPRNT120.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT130.resx">
+      <DependentUpon>KFGPRNT130.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT090.resx">
+      <DependentUpon>KFGPRNT090.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT080.resx">
+      <DependentUpon>KFGPRNT080.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT060.resx">
+      <DependentUpon>KFGPRNT060.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT070.resx">
+      <DependentUpon>KFGPRNT070.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT010.resx">
+      <DependentUpon>KFGPRNT010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT020.resx">
+      <DependentUpon>KFGPRNT020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT030.resx">
+      <DependentUpon>KFGPRNT030.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT040.resx">
+      <DependentUpon>KFGPRNT040.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT050.resx">
+      <DependentUpon>KFGPRNT050.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT140.resx">
+      <DependentUpon>KFGPRNT140.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT150.resx">
+      <DependentUpon>KFGPRNT150.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT160.resx">
+      <DependentUpon>KFGPRNT160.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT170.resx">
+      <DependentUpon>KFGPRNT170.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帳票印刷\KFGPRNT180.resx">
+      <DependentUpon>KFGPRNT180.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="年次処理\KFGNENJ040.resx">
+      <DependentUpon>KFGNENJ040.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN010.resx">
+      <DependentUpon>KFGMAIN010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN030.resx">
+      <DependentUpon>KFGMAIN030.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN031.resx">
+      <DependentUpon>KFGMAIN031.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN040.resx">
+      <DependentUpon>KFGMAIN040.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN050.resx">
+      <DependentUpon>KFGMAIN050.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN060.resx">
+      <DependentUpon>KFGMAIN060.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN070.resx">
+      <DependentUpon>KFGMAIN070.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN071.resx">
+      <DependentUpon>KFGMAIN071.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="日常業務\KFGMAIN072.resx">
+      <DependentUpon>KFGMAIN072.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST020.resx">
+      <DependentUpon>KFGMAST020.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST021.resx">
+      <DependentUpon>KFGMAST021.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST030.resx">
+      <DependentUpon>KFGMAST030.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST040.resx">
+      <DependentUpon>KFGMAST040.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST041.resx">
+      <DependentUpon>KFGMAST041.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST050.resx">
+      <DependentUpon>KFGMAST050.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST060.resx">
+      <DependentUpon>KFGMAST060.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST070.resx">
+      <DependentUpon>KFGMAST070.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST100.resx">
+      <DependentUpon>KFGMAST100.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST110.resx">
+      <DependentUpon>KFGMAST110.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST120.resx">
+      <DependentUpon>KFGMAST120.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="マスタ管理\KFGMAST010.resx">
+      <DependentUpon>KFGMAST010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="その他\KFGOTHR010.resx">
+      <DependentUpon>KFGOTHR010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="その他\KFGOTHR020.resx">
+      <DependentUpon>KFGOTHR020.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="その他\KFGOTHR090.resx">
+      <DependentUpon>KFGOTHR090.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="年次処理\KFGNENJ010.resx">
+      <DependentUpon>KFGNENJ010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="年次処理\KFGNENJ020.resx">
+      <DependentUpon>KFGNENJ020.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="年次処理\KFGNENJ021.resx">
+      <DependentUpon>KFGNENJ021.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="メニュー\KFGMENU010.resx">
+      <DependentUpon>KFGMENU010.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\DataSources\GFJMAIN0300G.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="small_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{153F66FC-F030-44C5-8AD6-D94D21FD255E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>small_icon.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MediaConvert</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>MediaConvert</RootNamespace>
+    <StartupObject>MediaConvert.My.MyApplication</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsForms</MyType>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/MediaConvert/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\EXE\</OutputPath>
+    <DocumentationFile>MediaConvert.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\EXE\</OutputPath>
+    <DocumentationFile>MediaConvert.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'CMT実機テスト|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>MediaConvert.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CAstBatch, Version=1.0.5840.37175, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstBatch.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstCommon, Version=1.0.3679.30147, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstExtendPrint, Version=1.0.6088.38376, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstExtendPrint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstExternal, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstExternal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstFormat, Version=1.0.3680.36621, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstFormat.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CAstReports, Version=1.0.3679.30138, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\CAstReports.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="clsFUSION, Version=1.0.3679.30136, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\clsFUSION.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="clsMenteCommon, Version=1.0.3679.30135, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\clsMenteCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CMT\clsCmtCommon.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CMT\clsCmtData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CMT\clsDataBase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CMT\clsItakuData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN010.Designer.vb">
+      <DependentUpon>KFCMAIN010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN011.Designer.vb">
+      <DependentUpon>KFCMAIN011.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN020.Designer.vb">
+      <DependentUpon>KFCMAIN020.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN020.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN021.Designer.vb">
+      <DependentUpon>KFCMAIN021.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT\KFCMAIN021.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCMENU010.designer.vb">
+      <DependentUpon>KFCMENU010.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CMT\KFCMENU010.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCCMT011.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCCMT021.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CMT\KFCCMT051.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModMain.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CMT\KFCMAIN010.resx">
+      <DependentUpon>KFCMAIN010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCMAIN011.resx">
+      <DependentUpon>KFCMAIN011.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCMAIN020.resx">
+      <DependentUpon>KFCMAIN020.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCMAIN021.resx">
+      <DependentUpon>KFCMAIN021.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCMENU010.resx">
+      <DependentUpon>KFCMENU010.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCCMT011.resx">
+      <DependentUpon>KFCCMT011.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCCMT021.resx">
+      <DependentUpon>KFCCMT021.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CMT\KFCCMT051.resx">
+      <DependentUpon>KFCCMT051.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMTDLL\CMT.vbproj">
+      <Project>{8CEFE5EE-2F80-44DC-9A99-B4CE67A499E5}</Project>
+      <Name>CMT</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="small_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

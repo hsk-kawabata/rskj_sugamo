@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="費目名１.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法１.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額１.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名２.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法２.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額２.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名３.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法３.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額３.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名４.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法４.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額４.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名５.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法５.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額５.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名６.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法６.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額６.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名７.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法７.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額７.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名８.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法８.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額８.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名９.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法９.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額９.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名１０.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額１０.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名１１.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法１１.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額１１.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="費目名１２.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="請求方法１２.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="金額１２.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DataGridViewButtonColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DataGridViewButtonColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>32</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
+        AADh4eEA9sWfAPbFngD1xJ4A98OcAPK4kgDosIkA36+JAPCwggDoqYMA7Kh9AOelfgDlqYUA3qN+ANuh
+        fQDRoYAAssy7ALLKugCyyrkAxqiNALHJuACevrEAlaWWAJeXhACQvrgAf6mlAGjBxwBlpagAkpGAAH6U
+        iAB4kIYAaJGQAEz8/gA18/4AI/X+ACDu/gBaxcwAQLrQACLp/AAivd4AS7PBAEKzxgBJrLsAQKu7ADe3
+        zwAosswAMKe6ACSqxABWpa4AVqKoAEqepgA/orAAY5+iAF+RjwBGlZ0ASI2SACGkvQAlnrUAOJuqAC2P
+        pQA8laAAMIydACWBlgAqcoEAHu7+AB3m/QAZ6f4AEuj+AAzV9wAJ0fsABND+AAPP/AAJzPkAB8z4AAPP
+        /QAEzPwAA8/+AAPO/QADzfwAAsz8ABXH8QAPyPIAB8r4AAvI9AARx/AAFMTrAA/G7wAMxe8ABMv8AATL
+        +gACyvsAAcj5AALI+AABx/gAAcf3AALF9AAdweMAGcDkAALE9QAOwOgAAcHwAAG/7gABvu0AAbrpAB/A
+        4gAavuEAG7ndABu11QAWstcAD7ndAAOx3AABqdMAHbTPABmtzQADosoABZq/AA+ZugABl70AAZe8AAGV
+        uwAJk7YAApK2AAl9mgADfJwAHX2RAA53kQADdJAAAnSQAPCqegDtpHQA5aB1AOebbwDgoXoA35tyANqd
+        eADZmHAA5plrANmTaQDYkWcA15BmANiQZgDbjV8A0odaANCFWQDQj2kAypBsAMqIYQDKhVwAxZh5AMGX
+        dQDCimUAtIBeAM+FWgDNhFgAzIJWAMuAVADKgVUAyYBUAMCBWgC2e1YA2YBLAMt9TgDSe0gA03lEAMh8
+        TwDFek0Aw3dJAMZzQgDAek8AvHlQAL96TgDAc0UAwHJEAL5xQwC+b0EAu2s8ALV6UgCxb0QAsWo/AK5q
+        QAC0aT0AsWg8ALdmNgC0YzMAtWMzALJiMgCvXy8AqV8yAK1aKQCsWSgAqVYlAKdSIQCgh28AlXheAKZz
+        UgCXbE0An2ZCAJZnRwCZXzoAklw5AKVdMgCkWy4AoFQlAKNQHwCRVTAAkFIrAJ1NHgCUTSEApVAeAKFP
+        HgCkThwAoEsYAJpMHQCXRxYAnUYSAJlEEgCcRBAAm0QPAJpDDwCVQQ4Alz8KAJI+DQCUPAcAkjoFAI1q
+        SwCAa1IAjFQxAHtaPACKVjAAiVIuAH5MKACARB8AiUMYAIw+DwCNOggAjDcEAIk8DgCDOxAAfzUJAHEx
+        CQBegXgAaHFnAGxjTQBcZFcAUnhzAE9zbQA+bXEAImBtADtZWQAeU18ABVRpAAFEVQBsSy0AUEMzAA5F
+        UgAAAAAA/////yQuOTk5OTk5OTk5OTk5OTk5OTk5OTk5O////////xo4c2xqampqampqampqampqampq
+        ampqamlwev////8qc25iWFhYWFhYWFhYWFhYWFhYWFhYWFhYS0VQe////3RnWk1MTExMTExMTExMTExM
+        TExMTExMTExMTVxv+v8+b1pNTExMTExMTExMTExMTExMTExMTExMTExMTWV7+X5mTUxMTExMTExMTExM
+        TExMTExMTE1UaGhTTExMXXf7fmVKHJQPF01MTExMTDSVDw8rTEgxwJEOCQYTKk1cdvt+ZUeTiovDTExM
+        TExWnouKni1MMJ6Kg4AIgomR8Fx1+35lR6manMZMTExMTDKomp3DS0w0j5gXGRUGiJzEOXX7fmVHsqus
+        4kxMTExNw62ssjZMTCsfVk1MTGCmq7L0dft+ZUe7uLnmTExMTC3Jt7nMV0xMTExMTExMU8m4uvN1+35l
+        R8q/v+dMTExN8cu/zvRMTExMTExMTS3y1L/O9XX7f2VH1djZ70xMTGvs2djsbExMTExMSDz87d3Y2Olx
+        dft/ZUfq3t/vTExh/Ove6/VNTExMTGr87uvf3NzpOlt1+39lR9XY2ujgx+3d1tnyUkxMTExS5t3Z1tPP
+        8GFMW3X7f2VH1NLS0NDQ0r+5szJZTExMTC7V0tLkM0lMTExbdft+ZUfKvL22o6Ogjae6tOFjTExMNr29
+        z2tMTExMTF11+35lR7u2t+ZVVWAolaK4yPNNTEwztrjNOExMTCc3XXX7fmVHta2u5UxMTExRsKuuzHFM
+        TFaoobSwFx7gxuVcdft+ZUexpaXHTExMTEwepKWzPExMTCmAgY6PnJubxV11+35lR6mPmcZMTExMTB6Z
+        mKk2TExMTGgVB4CDlR0nXXX7fmVHk4qLxUxMTExUl4uMnjNMTExMTExNS0tNTExddft/ZUeQhYXCLCwp
+        MMCQhYWeY0xMTExMTExMTExMTFt1+39lR4cLCw0MDA2GhAsJhDRMTExMTExMTExMTExMW3X7f2VKDgEB
+        AgMCAQIEBAwbTkxMTExMTExMTExMTExbdft/ZUYaEBEREhIUFBgkVExMTExMTExMTExMTExMTFt1+3pk
+        RkxMTExMTExMTExMTExMTExMTExMTExMTExMW3X7fV9DTExMTExMTExMTExMTExMTExMTExMTExMTExe
+        d/n/biJCTExMTExMTExMTExMTExMTExMTExMTExMRmZ6////RCAgIiMjIyMjIyMjIyMjIyMjIyMjIyMj
+        QENJcv//////bUEmJiYmJiYmJiYmJiYmJiYmJiYmJiZBRXL/////////Pnh5eXl5eXl5eXl5eXl5eXl5
+        eXl5eXh8//////AAAA/AAAAHgAAAA4AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACAAAABwAAAA+AAAAfwAAAP
+</value>
+  </data>
+</root>

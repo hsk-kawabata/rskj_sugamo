@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "伝送連携送信", "伝送連携送信\伝送連携送信.vbproj", "{E71C9E07-3566-40D2-997B-ECA78C2C63EF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "伝送連携受信", "伝送連携受信\伝送連携受信.vbproj", "{90CD4D05-1D12-4982-A6C0-D7DDD9250538}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "伝送連携受信個別", "伝送連携受信個別\伝送連携受信個別.vbproj", "{DE1569D3-3471-48CB-A28E-8628228944E2}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Biware受信", "Biware連携受信\Biware受信.vbproj", "{3D30CD8F-7A98-4263-AF4D-253282F6A149}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E71C9E07-3566-40D2-997B-ECA78C2C63EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71C9E07-3566-40D2-997B-ECA78C2C63EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71C9E07-3566-40D2-997B-ECA78C2C63EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71C9E07-3566-40D2-997B-ECA78C2C63EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90CD4D05-1D12-4982-A6C0-D7DDD9250538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CD4D05-1D12-4982-A6C0-D7DDD9250538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CD4D05-1D12-4982-A6C0-D7DDD9250538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CD4D05-1D12-4982-A6C0-D7DDD9250538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1569D3-3471-48CB-A28E-8628228944E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1569D3-3471-48CB-A28E-8628228944E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1569D3-3471-48CB-A28E-8628228944E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1569D3-3471-48CB-A28E-8628228944E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D30CD8F-7A98-4263-AF4D-253282F6A149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D30CD8F-7A98-4263-AF4D-253282F6A149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D30CD8F-7A98-4263-AF4D-253282F6A149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D30CD8F-7A98-4263-AF4D-253282F6A149}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

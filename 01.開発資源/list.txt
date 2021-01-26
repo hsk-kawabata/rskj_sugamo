@@ -1,0 +1,7 @@
+.vshost.exe
+.cache
+.vbproj.user
+.pdb
+.xml
+.txt
+.resources
