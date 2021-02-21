@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CAstBatch
+</name>
+</assembly>
+<members>
+<member name="M:CAstBatch.CommData.SelectTORIMAST_SUB(System.String,System.String,System.String)">
+ <summary>
+ 取引先マスタ情報(固有情報) 取得
+ </summary>
+ <param name="fsyorikbn">処理区分</param>
+ <param name="toris">取引先主コード</param>
+ <param name="torif">取引先副コード</param>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

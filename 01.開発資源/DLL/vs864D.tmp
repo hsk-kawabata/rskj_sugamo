@@ -1,0 +1,89 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CAstFormat
+</name>
+</assembly>
+<members>
+<member name="M:CAstFormat.CFormatZengin.HoseiFurikaeDate(System.String)">
+	<summary>
+ 振替日を休日補正した値を返す
+ </summary>
+	<param name="furiDate">補正元の振替日</param>
+	<returns>休日補正後の振替日</returns>
+	<remarks>2017/12/12 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（振替日休日補正対応）</remarks>
+</member><member name="M:CAstFormat.CFormatZengin.HoseiFurikaeDate2(System.String,CASTCommon.MyOracle)">
+	<summary>
+ 振替日を休日補正した値を返す(休日リスト再取得)
+ </summary>
+	<param name="furiDate">補正元の振替日</param>
+	<param name="db">DB</param>
+	<returns>休日補正後の振替日</returns>
+	<remarks>2017/12/12 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（振替日休日補正対応）</remarks>
+</member><member name="M:CAstFormat.CFormatZengin.IsEigyobi(System.DateTime,System.Collections.ArrayList@)">
+	<summary>
+ 営業日かどうか判定する
+ </summary>
+	<param name="base">対象の振替日</param>
+	<param name="holiday">祝日リスト</param>
+	<returns>True:営業日／False:休業日</returns>
+	<remarks>2017/12/12 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（振替日休日補正対応）</remarks>
+</member><member name="T:CAstFormat.CFormatSoufuriDen">
+	<summary>
+ MT代行データ　フォーマット定義クラス
+ </summary>
+	<remarks>
+ 2016/10/19 saitou RSV2 added for 信組対応
+ 笠岡信組に導入されているMT代行フォーマットクラスをRSV2に移植
+ </remarks>
+</member><member name="T:CAstFormat.ClsFormatCSVRienta">
+	<summary>
+ 振込発信CSVリエンタ　フォーマット定義クラス
+ </summary>
+	<remarks>
+ 2016/10/19 saitou RSV2 added for 信組対応
+ 近畿産業信組のFSV2のソースを解析し新規作成
+ </remarks>
+</member><member name="M:CAstFormat.CFormat.fn_Meisai_FukusuuIrai_Check(System.Collections.ArrayList)">
+	<summary>
+ 総振複数依頼存在チェック
+ </summary>
+	<param name="Arr">明細データ</param>
+	<returns>True or False</returns>
+	<remarks>2017/12/06 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（重複レコードチェック）</remarks>
+</member><member name="M:CAstFormat.CFormat.CheckInDatetime(System.String)">
+	<summary>
+ 受付時間外チェック
+ 受付時間内の処理かチェックする
+ </summary>
+	<param name="FuriDate">振込日</param>
+	<returns>True,False</returns>
+	<remarks>2017/12/07 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（持込期日対応）</remarks>
+</member><member name="M:CAstFormat.CFormat.CheckKaisiDate(System.String)">
+	<summary>
+ 受付期日チェック
+ 処理日が受付開始日内かチェックする
+ </summary>
+	<param name="FuriDate">振替/振込日</param>
+	<returns>True,False</returns>
+	<remarks>2017/12/07 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（持込期日対応）</remarks>
+</member><member name="M:CAstFormat.CFormat.CheckMotikomiDate">
+	<summary>
+ 持込期日チェック
+ 処理日がスケジュールマスタの持込期日内かチェックする
+ </summary>
+	<returns>True,False</returns>
+	<remarks>2017/12/07 タスク）西野　広島信金(RSV2標準版) added for 大規模構築対応（持込期日対応）</remarks>
+</member><member name="M:CAstFormat.CFormatFurikomi.ChkKDBMAST(System.String,System.String,System.String)">
+	<summary>
+ 口座情報マスタに指定口座が存在するかチェックする
+ </summary>
+	<param name="astrSIT_NO">支店コード</param>
+	<param name="astrKAMOKU">科目コード</param>
+	<param name="astrKOUZA">口座番号</param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

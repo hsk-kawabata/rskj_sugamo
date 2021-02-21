@@ -1,0 +1,424 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CAstCommon
+</name>
+</assembly>
+<members>
+<member name="M:CASTCommon.Events.GotFocus(System.Object,System.EventArgs)">
+ <summary>
+ コントロールがフォーカスを受け取ったときの処理
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.LostFocus(System.Object,System.EventArgs)">
+ <summary>
+ コントロールにフォーカスがなくなったときの処理
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ コントロールにフォーカスがあるときでキーが押された時の処理(最大桁入力でカーソル移動有り)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.KeyPressNum(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ コントロールにフォーカスがあるときでキーが押された時の処理＜数字のみ入力可能＞(最大桁入力でカーソル移動有り)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.GotFocusMoney(System.Object,System.EventArgs)">
+ <summary>
+ コントロールがフォーカスを受け取ったときの処理
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.LostFocusMoney(System.Object,System.EventArgs)">
+ <summary>
+ コントロールにフォーカスがなくなったときの処理
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.KeyPressMoney(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ コントロールにフォーカスがあるときでキーが押された時の処理＜金額用＞(最大桁入力でカーソル移動有り)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.LostFocusZero(System.Object,System.EventArgs)">
+ <summary>
+ コントロールにフォーカスがなくなったときの処理(ゼロパディング)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.LostFocusKana(System.Object,System.EventArgs)">
+ <summary>
+ コントロールにフォーカスがなくなったときの処理(仮名変換)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.fn_change_kana_SPACE(System.String,System.String@)">
+ <summary>
+ 仮名文字変換
+ </summary>
+ <param name="strTXT"></param>
+ <param name="strRETURN"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.LostFocusZenkaku(System.Object,System.EventArgs)">
+ <summary>
+ コントロールにフォーカスがなくなったときの処理(全角変換)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.KeyPress2(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ コントロールにフォーカスがあるときでキーが押された時の処理(最大桁入力でカーソル移動無し)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.KeyPressNum2(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ コントロールにフォーカスがあるときでキーが押された時の処理＜数字のみ入力可能＞(最大桁入力でカーソル移動無し)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.Events.KeyPressMoney2(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ コントロールにフォーカスがあるときでキーが押された時の処理＜金額用＞(最大桁入力でカーソル移動無し)
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="T:CASTCommon.ClsTAX">
+ <summary>
+ 消費税管理メインクラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ClsTAX.#ctor">
+ <summary>
+ コンストラクタ生成
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ClsTAX.GetZeiritsu">
+ <summary>
+ 税率を取得します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ClsTAX.GetZeiritsu(System.String)">
+ <summary>
+ 税率を取得します。
+ </summary>
+ <param name="strDate">基準日</param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ClsTAX.GetInshizei">
+ <summary>
+ 印紙税を取得します。
+ </summary>
+ <remarks>2013/12/27 saitou 印紙税対応 add</remarks>
+</member>
+<member name="M:CASTCommon.ClsTAX.GetInshizei(System.String)">
+ <summary>
+ 印紙税を取得します。
+ </summary>
+ <param name="strDate">基準日</param>
+ <remarks>2013/12/27 saitou 印紙税対応 add</remarks>
+</member>
+<member name="T:CASTCommon.GakkouTreeView">
+ <summary>
+ 取引先ツリービュー部品化クラス
+ </summary>
+ <remarks>2016/10/06 saitou 八十二銀行 added for 取引先マスタ画面変更対応</remarks>
+</member>
+<member name="P:CASTCommon.GakkouTreeView.ITV_GAKKOU_CODE_TEXTBOX">
+ <summary>
+ 学校コードテキストボックスプロパティ
+ </summary>
+ <value>フォーム設定取引先主コードテキストボックス</value>
+ <returns>取引先主コードテキストボックス</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取引先主コードテキストボックスを設定する</remarks>
+</member>
+<member name="P:CASTCommon.GakkouTreeView.ITV_SELECT_BUTTON">
+ <summary>
+ 参照ボタンプロパティ
+ </summary>
+ <value>フォーム設定参照ボタン</value>
+ <returns>参照ボタン</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている参照ボタンを設定する</remarks>
+</member>
+<member name="P:CASTCommon.GakkouTreeView.ITV_CANCEL_BUTTON">
+ <summary>
+ 取消ボタンプロパティ
+ </summary>
+ <value>フォーム設定参照ボタン</value>
+ <returns>取消参照ボタン</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取消ボタンを設定する</remarks>
+</member>
+<member name="P:CASTCommon.GakkouTreeView.ITV_NEXT_FOCUS">
+ <summary>
+ Ｎｅｘｔフォーカスプロパティ
+ </summary>
+ <value>次フォーカステキストボックス</value>
+ <returns>コントロール</returns>
+ <remarks>ツリービューのダブルクリック後の移動するフォーカスを指定する</remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.GakkouTreeView_Load(System.Object,System.EventArgs)">
+ <summary>
+ カスタムツリービューロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.CmdCIFForm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 参照ボタンクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.CmdCIFClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ クリアボタンクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.TreeView_NodeMouseDoubleClick(System.Object,System.Windows.Forms.TreeNodeMouseClickEventArgs)">
+ <summary>
+ ノードマウスダブルクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.TextBoxItakuKName_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 委託者名カナバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.TextBoxItakuCode_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 委託者コードバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.ControlInitializa(System.Boolean)">
+ <summary>
+ 取引先ツリービューのコントロールを初期化します。
+ </summary>
+ <param name="ClearItakuText">委託者名カナ検索テキストボックスの初期化フラグ（デフォルト：True）</param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.SetGakkouTreeView">
+ <summary>
+ 取引先ツリービューを設定します。
+ </summary>
+ <returns>True - 正常 , False - 異常</returns>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.GakkouTreeView.GetGakkouTreeViewSQL">
+ <summary>
+ 取引先ツリービューを設定するSQLを作成します。
+ </summary>
+ <returns>作成SQL</returns>
+ <remarks></remarks>
+</member>
+<member name="T:CASTCommon.ItakuTreeView">
+ <summary>
+ 取引先ツリービュー部品化クラス
+ </summary>
+ <remarks>2016/10/06 saitou 八十二銀行 added for 取引先マスタ画面変更対応</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_FSYORI_KBN">
+ <summary>
+ 処理区分プロパティ
+ </summary>
+ <value>1 - 口振 , 3 - 総振</value>
+ <returns>設定処理区分</returns>
+ <remarks>コントロール配置時のインスタンス生成で処理区分を文字列で設定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_SORT_PATN">
+ <summary>
+ 表示順プロパティ
+ </summary>
+ <value>0 - 取引先コード順 , 1 - 委託者コード順 , 2 - 委託者カナ名順</value>
+ <returns>表示順区分</returns>
+ <remarks>コントロール配置時のインスタンス生成で処理区分を文字列で設定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_TORIS_CODE_TEXTBOX">
+ <summary>
+ 取引先主コードテキストボックスプロパティ
+ </summary>
+ <value>フォーム設定取引先主コードテキストボックス</value>
+ <returns>取引先主コードテキストボックス</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取引先主コードテキストボックスを設定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_TORIF_CODE_TEXTBOX">
+ <summary>
+ 取引先副コードテキストボックスプロパティ
+ </summary>
+ <value>フォーム設定取引先副コードテキストボックス</value>
+ <returns>取引先副コードテキストボックス</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取引先副コードテキストボックスを設定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_SELECT_BUTTON">
+ <summary>
+ 参照ボタンプロパティ
+ </summary>
+ <value>フォーム設定参照ボタン</value>
+ <returns>参照ボタン</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている参照ボタンを設定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_CANCEL_BUTTON">
+ <summary>
+ 取消ボタンプロパティ
+ </summary>
+ <value>フォーム設定参照ボタン</value>
+ <returns>取消参照ボタン</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取消ボタンを設定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_NEXT_FOCUS">
+ <summary>
+ Ｎｅｘｔフォーカスプロパティ
+ </summary>
+ <value>次フォーカステキストボックス</value>
+ <returns>テキストボックス</returns>
+ <remarks>ツリービューのダブルクリック後の移動するフォーカスを指定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_NEXT_FOCUS_BUTTON">
+ <summary>
+ Ｎｅｘｔフォーカスの次のフォーカスプロパティ
+ </summary>
+ <value>次フォーカステキストボックス</value>
+ <returns>テキストボックス</returns>
+ <remarks>ツリービューのダブルクリック後の移動するフォーカスを指定する</remarks>
+</member>
+<member name="P:CASTCommon.ItakuTreeView.ITV_ADD_SQL">
+ <summary>
+ 追加ＳＱＬプロパティ
+ </summary>
+ <value>追加ＳＱＬ</value>
+ <returns>文字列変数</returns>
+ <remarks>ツリービューの表示追加条件を指定する</remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.ItakuTreeView_Load(System.Object,System.EventArgs)">
+ <summary>
+ カスタムツリービューロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.CmdCIFForm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 参照ボタンクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.CmdCIFClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ クリアボタンクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.TreeView1_NodeMouseDoubleClick(System.Object,System.Windows.Forms.TreeNodeMouseClickEventArgs)">
+ <summary>
+ ノードマウスダブルクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.TextBoxItakuKName_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 委託者名カナバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.TextBoxItakuCode_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 委託者コードバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.ControlInitializa(System.Boolean)">
+ <summary>
+ 取引先ツリービューのコントロールを初期化します。
+ </summary>
+ <param name="ClearItakuText">委託者名カナ検索テキストボックスの初期化フラグ（デフォルト：True）</param>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.SetItakuTreeView">
+ <summary>
+ 取引先ツリービューを設定します。
+ </summary>
+ <returns>True - 正常 , False - 異常</returns>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ItakuTreeView.GetItakuTreeViewSQL">
+ <summary>
+ 取引先ツリービューを設定するSQLを作成します。
+ </summary>
+ <returns>作成SQL</returns>
+ <remarks></remarks>
+</member>
+<member name="M:CASTCommon.ModPublic.GetWAREKI(System.String,System.String)">
+ <summary>
+ 和暦変換
+ </summary>
+ <param name="strDate">変換する日付</param>
+ <param name="strFormat">変換するフォーマット</param>
+ <returns>変換後の日付</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

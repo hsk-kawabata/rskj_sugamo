@@ -1,0 +1,87 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+clsMenteCommon
+</name>
+</assembly>
+<members>
+<member name="M:MenteCommon.clsCommon.SelectItakuName_SelectTable(System.String,System.Windows.Forms.ComboBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.String,System.String)">
+ <summary>
+ 取引先コンボボックスの設定を行う（テーブル名指定）
+ </summary>
+ <param name="KanaKey">先頭カナ文字</param>
+ <param name="Cmbbox">コンボボックス名</param>
+ <param name="TORIS_CODE_T">取引先主コードテキストボックス</param>
+ <param name="TORIF_CODE_F">取引先副コードテキストボックス</param>
+ <param name="TABLE_NAME">対象の取引先マスタ</param>
+ <param name="Jyoken">条件指定</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:MenteCommon.clsCommon.ChkDejit_ENTRY(System.String,System.String,System.String,System.String)">
+ <summary>
+ チェックデジット関数(エントリで使用)
+ </summary>
+ <param name="KinCode">金庫コード</param>
+ <param name="SitCode">支店コード</param>
+ <param name="Kamoku">科目（2桁）</param>
+ <param name="Kouza">口座番号</param>
+ <returns>True or False</returns>
+ <remarks>ClsFUSIONより移行</remarks>
+</member>
+<member name="M:MenteCommon.clsCommon.SetComboBox_TESUU_TABLE_ID_T(System.Windows.Forms.ComboBox,System.String,System.Int32,System.String)">
+ <summary>
+ 振込手数料基準IDコンボボックス設定
+ </summary>
+ <param name="aComboBox">コンボボックスオブジェクト</param>
+ <param name="aTaxID">税率ID</param>
+ <param name="aItemData">初期設定インデックス</param>
+ <param name="aFSyoriKbn">処理区分(自振:1(デフォルト), 総振:3)</param>
+ <returns>0 - 正常, 2 - 異常</returns>
+ <remarks>2013/11/27 標準版 消費税対応 ADD</remarks>
+</member>
+<member name="M:MenteCommon.clsCommon.SelectTesuuName(System.Windows.Forms.ComboBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox,System.String)">
+ <summary>
+ 振込手数料検索コンボボックスを設定します。
+ </summary>
+ <param name="CmbBox">振込手数料検索コンボボックス</param>
+ <param name="txtTAX_ID">税率IDテキストボックス</param>
+ <param name="txtTESUU_TABLE_ID">手数料IDテキストボックス</param>
+ <param name="FSYORI_KBN">処理区分(1:自振 , 3:総振)</param>
+ <returns>0:正常 , -1:異常</returns>
+ <remarks>2013/12/02 消費税対応 ADD</remarks>
+</member>
+<member name="M:MenteCommon.clsCommon.Set_TESUU_CODE(System.Windows.Forms.ComboBox,System.Windows.Forms.TextBox,System.Windows.Forms.TextBox)">
+ <summary>
+ 振込手数料コンボボックス設定関数
+ </summary>
+ <param name="CmbBox">振込手数料検索コンボボックス</param>
+ <param name="txtTAX_ID">税率IDテキストボックス</param>
+ <param name="txtTESUU_TABLE_ID">手数料IDテキストボックス</param>
+ <returns>0:正常, -1:異常</returns>
+ <remarks>2013/12/02 消費税対応 ADD</remarks>
+</member>
+<member name="M:MenteCommon.clsCommon.GetObjectParam(System.String,System.String,System.String)">
+ <summary>
+ 指定した画面／帳票の個別情報ををINIファイルより取得する
+ </summary>
+ <param name="OBJ_ID">画面／帳票ID</param>
+ <param name="KEY_NAME">項目名</param>
+ <param name="MODE">0:画面、1:帳票</param>
+ <returns>ソートキー</returns>
+ <remarks></remarks>
+</member>
+<member name="M:MenteCommon.clsCommon.GetFromTo(System.String,System.Int32@,System.Int32@,System.Int32,System.Int32)">
+ <summary>
+ 指定した画面で使用する期間のFrom-Toを取得する
+ </summary>
+ <param name="FORM_ID">画面ID</param>
+ <param name="RET_FROM">何営業日前かを返却する</param>
+ <param name="RET_TO">何営業日後かを返却する</param>
+ <param name="DEF_FROM">INIファイルからの取得エラー時の返却値</param>
+ <param name="DEF_TO">INIファイルからの取得エラー時の返却値</param>
+ <remarks>INIファイルから取得できない場合は、DEF_FROM/DEF_TOの値を返却します</remarks>
+</member>
+</members>
+</doc>

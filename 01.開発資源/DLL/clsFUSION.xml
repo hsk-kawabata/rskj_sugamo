@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+clsFUSION
+</name>
+</assembly>
+<members>
+<member name="T:clsFUSION.clsPowerSORT">
+ <summary>
+ パワーソートクラス
+ </summary>
+ <remarks>2017/12/11 saitou 広島信金(RSV2標準) added for サーバー印刷対応</remarks>
+</member>
+<member name="M:clsFUSION.clsPowerSORT.#ctor">
+ <summary>
+ コンストラクタ
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

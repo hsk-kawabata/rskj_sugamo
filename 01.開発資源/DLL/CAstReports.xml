@@ -1,0 +1,136 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CAstReports
+</name>
+</assembly>
+<members>
+<member name="T:CAstReports.clsPowerSORT">
+ <summary>
+ パワーソートクラス
+ </summary>
+ <remarks>2017/12/11 saitou 広島信金(RSV2標準) added for サーバー印刷対応</remarks>
+</member>
+<member name="M:CAstReports.clsPowerSORT.#ctor">
+ <summary>
+ コンストラクタ
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:CAstReports.RA64">
+ <summary>
+ RepoAgent 64ビット環境印刷クラス
+ </summary>
+ <remarks>2017/12/11 saitou 広島信金(RSV2標準) added for サーバー印刷対応</remarks>
+</member>
+<member name="M:CAstReports.RA64.#ctor">
+ <summary>
+ コンストラクタ
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.PrtName">
+ <summary>
+ プリンタ名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.ReportName">
+ <summary>
+ 文書名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.RpdFileName">
+ <summary>
+ レポート定義ファイル名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.DataFileInputPath">
+ <summary>
+ データソースファイル検索パス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.InputDataTextName">
+ <summary>
+ データソースファイル名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.CustomDataFileInputPath">
+ <summary>
+ カスタムデータソースファイル検索パス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.Copies">
+ <summary>
+ コピー部数
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.ErrorDetail">
+ <summary>
+ エラー内容文字列
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.DataCode">
+ <summary>
+ 文字コード系
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.LogFileName">
+ <summary>
+ ログ採取ファイル名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:CAstReports.RA64.LogSize">
+ <summary>
+ 最大ログ採取量
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:CAstReports.RA64.ReportPrint">
+ <summary>
+ 帳票出力
+ </summary>
+ <returns>True - 正常 , False - 異常</returns>
+ <remarks></remarks>
+</member>
+<member name="M:CAstReports.RA64.ReportView">
+ <summary>
+ 帳票プレビュー
+ </summary>
+ <returns>True - 正常 , False - 異常</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

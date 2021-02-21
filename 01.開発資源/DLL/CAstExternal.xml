@@ -1,0 +1,300 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CAstExternal
+</name>
+</assembly>
+<members>
+<member name="T:CAstExternal.My.Resources.Resources">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:CAstExternal.My.Resources.Resources.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:CAstExternal.My.Resources.Resources.Culture">
+<summary>
+  厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_InsertSchmastSub(System.String,System.String,System.String,System.String,System.Int32,System.String@,CASTCommon.MyOracle,System.Collections.ArrayList,System.Collections.ArrayList)">
+ <summary>
+ 口振・総振のスケジュールマスタ(追加情報)の作成処理を行います。
+ </summary>
+ <param name="FSyoriKbn"></param>
+ <param name="TorisCode"></param>
+ <param name="TorifCode"></param>
+ <param name="FuriDate"></param>
+ <param name="MotikomiSeq"></param>
+ <param name="ReturnMessage"></param>
+ <param name="MainDB"></param>
+ <param name="ArrayNum"></param>
+ <param name="ArrayVcr"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_InsertSchmastSub_RetSQL(System.String,System.String,System.String,System.String,System.Int32,System.String@,System.Text.StringBuilder@,System.Collections.ArrayList,System.Collections.ArrayList)">
+ <summary>
+ 口振・総振のスケジュールマスタ(追加情報)の作成SQLを返します。
+ </summary>
+ <param name="FSyoriKbn"></param>
+ <param name="TorisCode"></param>
+ <param name="TorifCode"></param>
+ <param name="FuriDate"></param>
+ <param name="MotikomiSeq"></param>
+ <param name="ReturnMessage"></param>
+ <param name="RetSQL"></param>
+ <param name="ArrayNum"></param>
+ <param name="ArrayVcr"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_UpdateSchmastSub(System.String,System.String,System.String,System.String,System.Int32,System.Collections.ArrayList,System.String@,CASTCommon.MyOracle)">
+ <summary>
+ 口振・総振のスケジュールマスタ(追加情報)の更新処理を行います。
+ </summary>
+ <param name="FSyoriKbn"></param>
+ <param name="TorisCode"></param>
+ <param name="TorifCode"></param>
+ <param name="FuriDate"></param>
+ <param name="MotikomiSeq"></param>
+ <param name="ColumnInfo"></param>
+ <param name="ReturnMessage"></param>
+ <param name="MainDB"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_UpdateSchmastSub_Where(System.String,System.Text.StringBuilder,System.Collections.ArrayList,System.String@,CASTCommon.MyOracle)">
+ <summary>
+ 口振・総振のスケジュールマスタ(追加情報)の更新処理(Where句指定)を行います。
+ </summary>
+ <param name="FSyoriKbn"></param>
+ <param name="WhereSQL"></param>
+ <param name="ColumnInfo"></param>
+ <param name="ReturnMessage"></param>
+ <param name="MainDB"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_DeleteSchmastSub(System.String,System.String,System.String,System.String,System.Int32,System.String@,CASTCommon.MyOracle)">
+ <summary>
+ 口振・総振のスケジュールマスタ(追加情報)の更新処理を行います。
+ </summary>
+ <param name="FSyoriKbn"></param>
+ <param name="TorisCode"></param>
+ <param name="TorifCode"></param>
+ <param name="FuriDate"></param>
+ <param name="MotikomiSeq"></param>
+ <param name="ReturnMessage"></param>
+ <param name="MainDB"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_DeleteSchmastSub_Where(System.String,System.Text.StringBuilder,System.String@,CASTCommon.MyOracle)">
+ <summary>
+ 口振・総振のスケジュールマスタ(追加情報)の更新処理(Where句指定)を行います。
+ </summary>
+ <param name="FSyoriKbn"></param>
+ <param name="ReturnMessage"></param>
+ <param name="MainDB"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.GetTENMASTExistsCustom(CASTCommon.MyOracle,System.String,System.String,System.String,System.String,System.String,System.String@,System.String@)">
+ <summary>
+ 店舗マスタの存在を確認する。
+ </summary>
+ <param name="MainDB"></param>
+ <param name="DataKinNo"></param>
+ <param name="DataSitNo"></param>
+ <param name="DataKinName"></param>
+ <param name="DataSitName"></param>
+ <param name="DataFuriDate"></param>
+ <param name="RetKinName"></param>
+ <param name="RetSitName"></param>
+ <remarks>0 - 金融機関なし，1 - 金融機関あり，支店なし，2 - 金融機関，支店あり</remarks>
+</member>
+<member name="M:CAstExternal.ModExternal.Ex_GetTenMast(System.String,System.String,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 
+ </summary>
+ <param name="BKCode">金融機関コード</param>
+ <param name="BRCode">支店コード</param>
+ <param name="Kin_KName">金融機関カナ名</param>
+ <param name="Sit_KName">支店カナ名</param>
+ <param name="Kin_NName">金融機関名</param>
+ <param name="Sit_NName">支店名</param>
+ <returns>True：データあり、False：該当データなし</returns>
+</member>
+<member name="T:CAstExternal.ItakuTreeView">
+ <summary>
+ 取引先ツリービュー部品化クラス
+ </summary>
+ <remarks>2016/10/06 saitou 八十二銀行 added for 取引先マスタ画面変更対応</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_FSYORI_KBN">
+ <summary>
+ 処理区分プロパティ
+ </summary>
+ <value>1 - 口振 , 3 - 総振</value>
+ <returns>設定処理区分</returns>
+ <remarks>コントロール配置時のインスタンス生成で処理区分を文字列で設定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_SORT_PATN">
+ <summary>
+ 表示順プロパティ
+ </summary>
+ <value>0 - 取引先コード順 , 1 - 委託者コード順 , 2 - 委託者カナ名順</value>
+ <returns>表示順区分</returns>
+ <remarks>コントロール配置時のインスタンス生成で処理区分を文字列で設定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_TORIS_CODE_TEXTBOX">
+ <summary>
+ 取引先主コードテキストボックスプロパティ
+ </summary>
+ <value>フォーム設定取引先主コードテキストボックス</value>
+ <returns>取引先主コードテキストボックス</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取引先主コードテキストボックスを設定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_TORIF_CODE_TEXTBOX">
+ <summary>
+ 取引先副コードテキストボックスプロパティ
+ </summary>
+ <value>フォーム設定取引先副コードテキストボックス</value>
+ <returns>取引先副コードテキストボックス</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取引先副コードテキストボックスを設定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_SELECT_BUTTON">
+ <summary>
+ 参照ボタンプロパティ
+ </summary>
+ <value>フォーム設定参照ボタン</value>
+ <returns>参照ボタン</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている参照ボタンを設定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_CANCEL_BUTTON">
+ <summary>
+ 取消ボタンプロパティ
+ </summary>
+ <value>フォーム設定参照ボタン</value>
+ <returns>取消参照ボタン</returns>
+ <remarks>コントロール配置時のインスタンス生成でフォームに設定されている取消ボタンを設定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_NEXT_FOCUS">
+ <summary>
+ Ｎｅｘｔフォーカスプロパティ
+ </summary>
+ <value>次フォーカステキストボックス</value>
+ <returns>テキストボックス</returns>
+ <remarks>ツリービューのダブルクリック後の移動するフォーカスを指定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_NEXT_FOCUS_BUTTON">
+ <summary>
+ Ｎｅｘｔフォーカスの次のフォーカスプロパティ
+ </summary>
+ <value>次フォーカステキストボックス</value>
+ <returns>テキストボックス</returns>
+ <remarks>ツリービューのダブルクリック後の移動するフォーカスを指定する</remarks>
+</member>
+<member name="P:CAstExternal.ItakuTreeView.ITV_ADD_SQL">
+ <summary>
+ 追加ＳＱＬプロパティ
+ </summary>
+ <value>追加ＳＱＬ</value>
+ <returns>文字列変数</returns>
+ <remarks>ツリービューの表示追加条件を指定する</remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.ItakuTreeView_Load(System.Object,System.EventArgs)">
+ <summary>
+ カスタムツリービューロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.CmdCIFForm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 参照ボタンクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.CmdCIFClear_Click(System.Object,System.EventArgs)">
+ <summary>
+ クリアボタンクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.TreeView1_NodeMouseDoubleClick(System.Object,System.Windows.Forms.TreeNodeMouseClickEventArgs)">
+ <summary>
+ ノードマウスダブルクリックイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.TextBoxItakuKName_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 委託者名カナバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.TextBoxItakuCode_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 委託者コードバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.TextBoxTenpoCode_Validating(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 店舗コードバリデイティングイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.TextBoxTenpoCode_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ 店舗キープレスイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.ControlInitializa(System.Boolean)">
+ <summary>
+ 取引先ツリービューのコントロールを初期化します。
+ </summary>
+ <param name="ClearItakuText">委託者名カナ検索テキストボックスの初期化フラグ（デフォルト：True）</param>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.SetItakuTreeView">
+ <summary>
+ 取引先ツリービューを設定します。
+ </summary>
+ <returns>True - 正常 , False - 異常</returns>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.ItakuTreeView.GetItakuTreeViewSQL">
+ <summary>
+ 取引先ツリービューを設定するSQLを作成します。
+ </summary>
+ <returns>作成SQL</returns>
+ <remarks></remarks>
+</member>
+<member name="M:CAstExternal.KFSMAST010C.SYUBETU_T_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 種別コンボ変更イベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>2017/04/28 saitou RSV2 added for 標準機能追加(種別によって表示する手数料変更)</remarks>
+</member>
+</members>
+</doc>
