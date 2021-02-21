@@ -329,7 +329,7 @@ Partial Class KFSMAST010C
         Me.Label20 = New System.Windows.Forms.Label()
         Me.YOBI9_T = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.YOBI8_TL = New System.Windows.Forms.Label()
         Me.YOBI8_T = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.YOBI7_T = New System.Windows.Forms.ComboBox()
@@ -3727,7 +3727,7 @@ Partial Class KFSMAST010C
         Me.GroupBox3.Controls.Add(Me.Label20)
         Me.GroupBox3.Controls.Add(Me.YOBI9_T)
         Me.GroupBox3.Controls.Add(Me.Label18)
-        Me.GroupBox3.Controls.Add(Me.Label15)
+        Me.GroupBox3.Controls.Add(Me.YOBI8_TL)
         Me.GroupBox3.Controls.Add(Me.YOBI8_T)
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.YOBI7_T)
@@ -3744,7 +3744,7 @@ Partial Class KFSMAST010C
         Me.YOBI10_T.Font = New System.Drawing.Font("ＭＳ ゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.YOBI10_T.ImeMode = System.Windows.Forms.ImeMode.Off
         Me.YOBI10_T.Location = New System.Drawing.Point(591, 42)
-        Me.YOBI10_T.MaxLength = 3
+        Me.YOBI10_T.MaxLength = 7
         Me.YOBI10_T.Name = "YOBI10_T"
         Me.YOBI10_T.Size = New System.Drawing.Size(68, 19)
         Me.YOBI10_T.TabIndex = 509
@@ -3765,7 +3765,7 @@ Partial Class KFSMAST010C
         Me.YOBI9_T.Font = New System.Drawing.Font("ＭＳ ゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.YOBI9_T.Location = New System.Drawing.Point(400, 42)
         Me.YOBI9_T.Name = "YOBI9_T"
-        Me.YOBI9_T.Size = New System.Drawing.Size(53, 20)
+        Me.YOBI9_T.Size = New System.Drawing.Size(82, 20)
         Me.YOBI9_T.TabIndex = 506
         '
         'Label18
@@ -3778,17 +3778,17 @@ Partial Class KFSMAST010C
         Me.Label18.TabIndex = 507
         Me.Label18.Text = "基本料金徴求科目"
         '
-        'Label15
+        'YOBI8_TL
         '
-        Me.Label15.BackColor = System.Drawing.SystemColors.Control
-        Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label15.Font = New System.Drawing.Font("ＭＳ ゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label15.Location = New System.Drawing.Point(141, 42)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(133, 19)
-        Me.Label15.TabIndex = 505
-        Me.Label15.Tag = "1"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.YOBI8_TL.BackColor = System.Drawing.SystemColors.Control
+        Me.YOBI8_TL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.YOBI8_TL.Font = New System.Drawing.Font("ＭＳ ゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.YOBI8_TL.Location = New System.Drawing.Point(141, 42)
+        Me.YOBI8_TL.Name = "YOBI8_TL"
+        Me.YOBI8_TL.Size = New System.Drawing.Size(133, 19)
+        Me.YOBI8_TL.TabIndex = 505
+        Me.YOBI8_TL.Tag = "1"
+        Me.YOBI8_TL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'YOBI8_T
         '
@@ -3816,7 +3816,7 @@ Partial Class KFSMAST010C
         Me.YOBI7_T.Font = New System.Drawing.Font("ＭＳ ゴシック", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.YOBI7_T.Location = New System.Drawing.Point(113, 15)
         Me.YOBI7_T.Name = "YOBI7_T"
-        Me.YOBI7_T.Size = New System.Drawing.Size(53, 20)
+        Me.YOBI7_T.Size = New System.Drawing.Size(72, 20)
         Me.YOBI7_T.TabIndex = 498
         '
         'Label1
@@ -4934,7 +4934,7 @@ Partial Class KFSMAST010C
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents YOBI7_T As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents YOBI8_TL As System.Windows.Forms.Label
     Friend WithEvents YOBI8_T As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label

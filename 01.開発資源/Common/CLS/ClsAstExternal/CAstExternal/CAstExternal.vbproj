@@ -46,28 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAstCommon, Version=1.0.7250.36432, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\DLL\CAstCommon.dll</HintPath>
-    </Reference>
-    <Reference Include="CAstExtendPrint, Version=1.0.7250.30522, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\DLL\CAstExtendPrint.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="CAstFormat, Version=1.0.7250.36432, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\DLL\CAstFormat.dll</HintPath>
-    </Reference>
-    <Reference Include="CAstReports, Version=1.0.6144.25643, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\DLL\CAstReports.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="clsMenteCommon, Version=1.0.6144.25642, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\DLL\clsMenteCommon.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -169,7 +150,24 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ClsAstCommon\CAstCommon.vbproj">
+      <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
+      <Name>CAstCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ClsAstExtendPrint\CAstExtendPrint.vbproj">
+      <Project>{b7c44a80-21cd-48d0-abd7-b88f4a0b5fa9}</Project>
+      <Name>CAstExtendPrint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ClsAstReports\CAstReports.vbproj">
+      <Project>{3fb0075f-68bc-49d1-bcd2-84cc719d8372}</Project>
+      <Name>CAstReports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ClsMenteCommon\MenteCommon.vbproj">
+      <Project>{a6cd2636-8d88-4bac-9960-7c4e1497b237}</Project>
+      <Name>MenteCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy $(tagetdir)$(targetfilename)  ..\EXE

@@ -76,41 +76,6 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAstCommon">
-      <Name>CAstCommon</Name>
-      <HintPath>..\..\DLL\CAstCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CAstExtendPrint, Version=1.0.5829.23872, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLL\CAstExtendPrint.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CAstExternal, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLL\CAstExternal.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CAstFormat, Version=1.0.3908.17567, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLL\CAstFormat.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CAstFormatMini, Version=1.0.3909.16507, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLL\CAstFormatMini.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="CAstReports">
-      <Name>CAstReports</Name>
-      <HintPath>..\..\DLL\CAstReports.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="clsMenteCommon">
-      <Name>clsMenteCommon</Name>
-      <HintPath>..\..\DLL\clsMenteCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -589,6 +554,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="small_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstCommon\CAstCommon.vbproj">
+      <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
+      <Name>CAstCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstExtendPrint\CAstExtendPrint.vbproj">
+      <Project>{b7c44a80-21cd-48d0-abd7-b88f4a0b5fa9}</Project>
+      <Name>CAstExtendPrint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstExternal\CAstExternal\CAstExternal.vbproj">
+      <Project>{8c826383-cb9f-4e67-a931-c1d3040280f1}</Project>
+      <Name>CAstExternal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstFormatMini\CAstFormatMini.vbproj">
+      <Project>{7fba9dd1-84a3-48ed-9589-9d7ea98f07da}</Project>
+      <Name>CAstFormatMini</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstFormat\CAstFormat.vbproj">
+      <Project>{bbe05e0f-23f9-409f-867b-622c790d6a77}</Project>
+      <Name>CAstFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstReports\CAstReports.vbproj">
+      <Project>{3fb0075f-68bc-49d1-bcd2-84cc719d8372}</Project>
+      <Name>CAstReports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\clsFUSION\clsFUSION.vbproj">
+      <Project>{6fa2fc84-8752-4ac8-baa4-7ad6c6b34bcc}</Project>
+      <Name>clsFUSION</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsMenteCommon\MenteCommon.vbproj">
+      <Project>{a6cd2636-8d88-4bac-9960-7c4e1497b237}</Project>
+      <Name>MenteCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

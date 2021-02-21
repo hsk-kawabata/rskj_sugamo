@@ -191,14 +191,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClsAstCommon\CAstCommon.vbproj">
-      <Project>{7BA267BD-8BA6-4EBA-8B20-B88E8E7E34D7}</Project>
-      <Name>CAstCommon</Name>
-      <Private>False</Private>
-    </ProjectReference>
+    <Folder Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="My Project\" />
+    <ProjectReference Include="..\ClsAstCommon\CAstCommon.vbproj">
+      <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
+      <Name>CAstCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

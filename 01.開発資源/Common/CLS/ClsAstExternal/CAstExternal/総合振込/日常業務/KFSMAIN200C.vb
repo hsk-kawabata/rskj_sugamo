@@ -115,7 +115,7 @@ Public Class KFSMAIN200C
             ' 初期処理(振替日を算出し表示)
             '------------------------------------------
             Dim SystemDate As String = Date.Now.ToString("yyyyMMdd")     ' システム日付
-            Dim KijunDate As String = String.Empty                       ' システム日付の前営業日
+            Dim KijunDate As String = Date.Now.ToString("yyyyMM15")     ' システム日付の前営業日
             Dim KijunFuriDate As String = String.Empty
             bRet = GCom.CheckDateModule(SystemDate.Substring(0, 6) & "10", KijunDate, CInt(Ini.KijunShiftDate), 1)
 
@@ -317,87 +317,87 @@ Public Class KFSMAIN200C
             '------------------------------------------
             ' 基準日数
             '------------------------------------------
-            Ini.KijunShiftDate = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_KIJUN")
+            Ini.KijunShiftDate = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_KIJUN")
             Select Case Ini.KijunShiftDate
                 Case "err", "", Nothing
                     Ini.KijunShiftDate = "1"
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基準日数 分類:CUSTOMIZE_1358 項目:KIHONTESUU_KIJUN")
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基準日数 分類:CUSTOMIZE_1356 項目:KIHONTESUU_KIJUN")
             End Select
 
             '------------------------------------------
             ' 基本料金徴求取引先(主コード)
             '------------------------------------------
-            Ini.TesuuTorisCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_TORIS_CODE")
+            Ini.TesuuTorisCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_TORIS_CODE")
             Select Case Ini.TesuuTorisCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求取引先(主コード)", "CUSTOMIZE_1358", "KIHONTESUU_TORIS_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求取引先(主コード) 分類:CUSTOMIZE_1358 項目:KIHONTESUU_TORIS_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求取引先(主コード)", "CUSTOMIZE_1356", "KIHONTESUU_TORIS_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求取引先(主コード) 分類:CUSTOMIZE_1356 項目:KIHONTESUU_TORIS_CODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 基本料金徴求取引先(副コード)
             '------------------------------------------
-            Ini.TesuuTorifCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_TORIF_CODE")
+            Ini.TesuuTorifCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_TORIF_CODE")
             Select Case Ini.TesuuTorifCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求取引先(副コード)", "CUSTOMIZE_1358", "KIHONTESUU_TORIF_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求取引先(副コード) 分類:CUSTOMIZE_1358 項目:KIHONTESUU_TORIF_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求取引先(副コード)", "CUSTOMIZE_1356", "KIHONTESUU_TORIF_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求取引先(副コード) 分類:CUSTOMIZE_1356 項目:KIHONTESUU_TORIF_CODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 基本料金徴求委託者コード
             '------------------------------------------
-            Ini.TesuuItakuCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_ITAKU_CODE")
+            Ini.TesuuItakuCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_ITAKU_CODE")
             Select Case Ini.TesuuItakuCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求委託者コード", "CUSTOMIZE_1358", "KIHONTESUU_ITAKU_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求委託者コード 分類:CUSTOMIZE_1358 項目:KIHONTESUU_ITAKU_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求委託者コード", "CUSTOMIZE_1356", "KIHONTESUU_ITAKU_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求委託者コード 分類:CUSTOMIZE_1356 項目:KIHONTESUU_ITAKU_CODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 基本料金徴求委託者名
             '------------------------------------------
-            Ini.TesuuItakuName = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_ITAKU_NAME")
+            Ini.TesuuItakuName = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_ITAKU_NAME")
             Select Case Ini.TesuuItakuName
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求委託者名", "CUSTOMIZE_1358", "KIHONTESUU_ITAKU_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求委託者名 分類:CUSTOMIZE_1358 項目:KIHONTESUU_ITAKU_NAME")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求委託者名", "CUSTOMIZE_1356", "KIHONTESUU_ITAKU_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求委託者名 分類:CUSTOMIZE_1356 項目:KIHONTESUU_ITAKU_NAME")
                     Return False
             End Select
 
             '------------------------------------------
             ' 基本料金徴求支店コード
             '------------------------------------------
-            Ini.TesuuShitenCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_SHITEN_CODE")
+            Ini.TesuuShitenCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_SHITEN_CODE")
             Select Case Ini.TesuuShitenCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求支店コード", "CUSTOMIZE_1358", "KIHONTESUU_SHITEN_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求支店コード 分類:CUSTOMIZE_1358 項目:KIHONTESUU_SHITEN_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求支店コード", "CUSTOMIZE_1356", "KIHONTESUU_SHITEN_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求支店コード 分類:CUSTOMIZE_1356 項目:KIHONTESUU_SHITEN_CODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 基本料金徴求支店名
             '------------------------------------------
-            Ini.TesuuShitenName = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_SHITEN_NAME")
+            Ini.TesuuShitenName = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_SHITEN_NAME")
             Select Case Ini.TesuuShitenName
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求支店名", "CUSTOMIZE_1358", "KIHONTESUU_SHITEN_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求支店名 分類:CUSTOMIZE_1358 項目:KIHONTESUU_SHITEN_NAME")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求支店名", "CUSTOMIZE_1356", "KIHONTESUU_SHITEN_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求支店名 分類:CUSTOMIZE_1356 項目:KIHONTESUU_SHITEN_NAME")
                     Return False
             End Select
 
             '------------------------------------------
             ' 基本料金データ出力ファイル名
             '------------------------------------------
-            Ini.TesuuFileName = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_FILE_NAME")
+            Ini.TesuuFileName = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_FILE_NAME")
             Select Case Ini.TesuuFileName
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金データ出力ファイル名", "CUSTOMIZE_1358", "KIHONTESUU_FILE_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金データ出力ファイル名 分類:CUSTOMIZE_1358 項目:KIHONTESUU_FILE_NAME")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金データ出力ファイル名", "CUSTOMIZE_1356", "KIHONTESUU_FILE_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金データ出力ファイル名 分類:CUSTOMIZE_1356 項目:KIHONTESUU_FILE_NAME")
                     Return False
             End Select
 
@@ -405,11 +405,11 @@ Public Class KFSMAIN200C
             '------------------------------------------
             ' 基本料金データ作成対象媒体
             '------------------------------------------
-            Ini.TesuuBaitaiCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_BAITAI_CODE")
+            Ini.TesuuBaitaiCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_BAITAI_CODE")
             Select Case Ini.TesuuBaitaiCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求媒体", "CUSTOMIZE_1358", "KIHONTESUU_BAITAI_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求媒体 分類:CUSTOMIZE_1358 項目:KIHONTESUU_BAITAI_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "基本料金徴求媒体", "CUSTOMIZE_1356", "KIHONTESUU_BAITAI_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求媒体 分類:CUSTOMIZE_1356 項目:KIHONTESUU_BAITAI_CODE")
                     Return False
             End Select
             '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- END
@@ -532,13 +532,8 @@ Public Class KFSMAIN200C
         Try
             MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "マスタチェック", "開始", "")
 
-            ' 2017/12/15 FJH）向井 CHG 青梅信金 作成対象の条件追加-------------------- START
             Dim KijunDate_END = txtFuriDateY.Text & txtFuriDateM.Text & "01"
-            '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- START
             Dim KijunDate_START = String.Format("{0:yyyyMM}", GCom.SET_DATE(KijunDate_END).AddMonths(-1))
-            'Dim KijunDate_START = String.Format("{0:yyyyMMDD}", GCom.SET_DATE(KijunDate_END).AddMonths(-1))
-            '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- END
-            ' 2017/12/15 FJH）向井 CHG 青梅信金 作成対象の条件追加-------------------- END
 
             '------------------------------------------
             ' 取引先マスタ存在チェック
@@ -550,17 +545,9 @@ Public Class KFSMAIN200C
             SQL.Append("     S_TORIMAST")
             SQL.Append(" WHERE")
             SQL.Append("     YOBI7_T                  <> '0'")
-            ' 2017/12/15 FJH）向井 CHG 青梅信金 作成対象の条件追加-------------------- START
             SQL.Append(" AND '" & KijunDate_END & "' < SYURYOU_DATE_T")         '契約終了日が振替月の1日より後か
-            '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- START
             SQL.Append(" AND '" & KijunDate_START & "' > YOBI2_T")         '契約開始日が振替月の1日の1ヶ月前より前か
-            'SQL.Append(" AND '" & KijunDate_START & "' > KAISI_DATE_T")         '契約開始日が振替月の1日の1ヶ月前より前か
-            '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- END
-            'SQL.Append(" AND '" & KijunDate & "' BETWEEN KAISI_DATE_T AND SYURYOU_DATE_T")
-            ' 2017/12/15 FJH）向井 CHG 青梅信金 作成対象の条件追加-------------------- END
-            '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- START
             SQL.Append(" AND BAITAI_CODE_T IN (" & Ini.TesuuBaitaiCode & ")")
-            '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- END
 
             If OraReader.DataReader(SQL) = False Then
                 MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "マスタチェック", "成功", "基本料金データ作成先０件")
@@ -721,20 +708,11 @@ Public Class KFSMAIN200C
                 SQL.Append("     S_TORIMAST")
                 SQL.Append(" WHERE")
                 SQL.Append("     YOBI7_T                  <> '0'")
-                '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- START
                 Dim KijunDate_END = txtFuriDateY.Text & txtFuriDateM.Text & "01"
-                '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- START
                 Dim KijunDate_START = String.Format("{0:yyyyMM}", GCom.SET_DATE(KijunDate_END).AddMonths(-1))
-                'Dim KijunDate_START = String.Format("{0:yyyyMMDD}", GCom.SET_DATE(KijunDate_END).AddMonths(-1))
-                '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- END
                 SQL.Append(" AND '" & KijunDate_END & "' < SYURYOU_DATE_T")         '契約終了日が振替月の1日より後か
-                '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- START
                 SQL.Append(" AND '" & KijunDate_START & "' > YOBI2_T")         '契約開始日が振替月の1日の1ヶ月前より前か
-                'SQL.Append(" AND '" & KijunDate_START & "' > KAISI_DATE_T")         '契約開始日が振替月の1日の1ヶ月前より前か
-                '2018/01/22 FJH）向井 CHG 青梅信金(支店登録月追加) ---------------------------------------- END
                 SQL.Append(" AND BAITAI_CODE_T IN (" & Ini.TesuuBaitaiCode & ")")
-                'SQL.Append(" AND '" & KijunDate & "' BETWEEN KAISI_DATE_T AND SYURYOU_DATE_T")
-                '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- END
                 SQL.Append(" ORDER BY")
                 SQL.Append("     YOBI8_T")
                 SQL.Append("   , YOBI9_T")
@@ -898,4 +876,3 @@ Public Class KFSMAIN200C
 #End Region
 
 End Class
-'2017/09/05 タスク）綾部 ADD 【PG】青梅信金 カスタマイズ対応(UI_5-2) -------------------- END

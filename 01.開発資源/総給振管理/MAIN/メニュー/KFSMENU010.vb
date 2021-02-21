@@ -2,6 +2,7 @@
 Option Strict On
 
 Imports CASTCommon
+Imports CAstExternal
 
 Public Class KFSMENU010
 
@@ -165,9 +166,9 @@ Public Class KFSMENU010
         'Call ShowForm("取引先マスタメンテナンス", New KFSMAST010)
         Select Case INI_RSV2_MASTPTN
             Case "1"
-                Call ShowForm("取引先マスタメンテナンス", New KFSMAST010)
+                Call ShowForm("取引先マスタメンテナンス", New KFSMAST010C)
             Case "2"
-                Call ShowForm("取引先マスタメンテナンス", New KFSMAST011)
+                Call ShowForm("取引先マスタメンテナンス", New KFSMAST010C)
         End Select
         ' 2016/09/01 タスク）綾部 CHG 【PG】(飯田信金 カスタマイズ外対応(大規模マスタ統合)) -------------------- END
 
@@ -376,7 +377,7 @@ Public Class KFSMENU010
     '*** Str Add 2015/12/26 sys)mori for【PG】UI_B-14-8(RSV2対応)
 #Region "関数"
     Private Function SetDisplayInfo(ByRef ERRMSG As String) As Boolean
-        
+
         Try
 
             Dim INI_RSV2_KINBATCH As String = CASTCommon.GetRSKJIni("RSV2_V1.0.0", "KINBATCH")
@@ -470,6 +471,16 @@ Public Class KFSMENU010
             MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "終了", "")
         End Try
     End Function
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        'スケジュールメンテナンス
+        Call ShowForm("基本料金データ作成", New KFSMAIN200C)
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        'スケジュールメンテナンス
+        Call ShowForm("後取手数料データ作成", New KFSMAIN210C)
+    End Sub
     ' 2016/01/12 タスク）綾部 ADD 【PG】UI_B-14-01(RSV2対応) -------------------- END
 
 #End Region

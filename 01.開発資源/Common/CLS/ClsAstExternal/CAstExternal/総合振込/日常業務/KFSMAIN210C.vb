@@ -316,87 +316,87 @@ Public Class KFSMAIN210C
             '------------------------------------------
             ' 基準日数
             '------------------------------------------
-            Ini.KijunShiftDate = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_KIJUN")
+            Ini.KijunShiftDate = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_KIJUN")
             Select Case Ini.KijunShiftDate
                 Case "err", "", Nothing
                     Ini.KijunShiftDate = "1"
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基準日数 分類:CUSTOMIZE_1358 項目:ATODORITESUU_KIJUN")
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基準日数 分類:CUSTOMIZE_1356 項目:ATODORITESUU_KIJUN")
             End Select
 
             '------------------------------------------
             ' 後取手数料徴求取引先(主コード)
             '------------------------------------------
-            Ini.TesuuTorisCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_TORIS_CODE")
+            Ini.TesuuTorisCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_TORIS_CODE")
             Select Case Ini.TesuuTorisCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求取引先(主コード)", "CUSTOMIZE_1358", "ATODORITESUU_TORISCODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求取引先(主コード) 分類:CUSTOMIZE_1358 項目:ATODORITESUU_TORISCODE")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求取引先(主コード)", "CUSTOMIZE_1356", "ATODORITESUU_TORISCODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求取引先(主コード) 分類:CUSTOMIZE_1356 項目:ATODORITESUU_TORISCODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 後取手数料徴求取引先(副コード)
             '------------------------------------------
-            Ini.TesuuTorifCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_TORIF_CODE")
+            Ini.TesuuTorifCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_TORIF_CODE")
             Select Case Ini.TesuuTorifCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求取引先(副コード)", "CUSTOMIZE_1358", "ATODORITESUU_TORIFCODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求取引先(副コード) 分類:CUSTOMIZE_1358 項目:ATODORITESUU_TORIFCODE")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求取引先(副コード)", "CUSTOMIZE_1356", "ATODORITESUU_TORIFCODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求取引先(副コード) 分類:CUSTOMIZE_1356 項目:ATODORITESUU_TORIFCODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 後取手数料徴求委託者コード
             '------------------------------------------
-            Ini.TesuuItakuCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_ITAKU_CODE")
+            Ini.TesuuItakuCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_ITAKU_CODE")
             Select Case Ini.TesuuItakuCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求委託者コード", "CUSTOMIZE_1358", "ATODORITESUU_ITAKU_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求委託者コード 分類:CUSTOMIZE_1358 項目:ATODORITESUU_ITAKU_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求委託者コード", "CUSTOMIZE_1356", "ATODORITESUU_ITAKU_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求委託者コード 分類:CUSTOMIZE_1356 項目:ATODORITESUU_ITAKU_CODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 後取手数料徴求委託者名
             '------------------------------------------
-            Ini.TesuuItakuName = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_ITAKU_NAME")
+            Ini.TesuuItakuName = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_ITAKU_NAME")
             Select Case Ini.TesuuItakuName
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求委託者名", "CUSTOMIZE_1358", "ATODORITESUU_ITAKU_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求委託者名 分類:CUSTOMIZE_1358 項目:ATODORITESUU_ITAKU_NAME")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求委託者名", "CUSTOMIZE_1356", "ATODORITESUU_ITAKU_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求委託者名 分類:CUSTOMIZE_1356 項目:ATODORITESUU_ITAKU_NAME")
                     Return False
             End Select
 
             '------------------------------------------
             ' 後取手数料徴求支店コード
             '------------------------------------------
-            Ini.TesuuShitenCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_SHITEN_CODE")
+            Ini.TesuuShitenCode = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_SHITEN_CODE")
             Select Case Ini.TesuuShitenCode
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求支店コード", "CUSTOMIZE_1358", "ATODORITESUU_SHITEN_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求支店コード 分類:CUSTOMIZE_1358 項目:ATODORITESUU_SHITEN_CODE")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求支店コード", "CUSTOMIZE_1356", "ATODORITESUU_SHITEN_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求支店コード 分類:CUSTOMIZE_1356 項目:ATODORITESUU_SHITEN_CODE")
                     Return False
             End Select
 
             '------------------------------------------
             ' 後取手数料徴求支店名
             '------------------------------------------
-            Ini.TesuuShitenName = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_SHITEN_NAME")
+            Ini.TesuuShitenName = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_SHITEN_NAME")
             Select Case Ini.TesuuShitenName
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求支店名", "CUSTOMIZE_1358", "ATODORITESUU_SHITEN_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求支店名 分類:CUSTOMIZE_1358 項目:ATODORITESUU_SHITEN_NAME")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求支店名", "CUSTOMIZE_1356", "ATODORITESUU_SHITEN_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求支店名 分類:CUSTOMIZE_1356 項目:ATODORITESUU_SHITEN_NAME")
                     Return False
             End Select
 
             '------------------------------------------
             ' 後取手数料データ出力ファイル名
             '------------------------------------------
-            Ini.TesuuFileName = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "ATODORITESUU_FILE_NAME")
+            Ini.TesuuFileName = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "ATODORITESUU_FILE_NAME")
             Select Case Ini.TesuuFileName
                 Case "err", "", Nothing
-                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求データ出力ファイル名", "CUSTOMIZE_1358", "ATODORITESUU_FILE_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求データ出力ファイル名 分類:CUSTOMIZE_1358 項目:ATODORITESUU_FILE_NAME")
+                    MessageBox.Show(String.Format(MSG0001E, "後取手数料徴求データ出力ファイル名", "CUSTOMIZE_1356", "ATODORITESUU_FILE_NAME"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:後取手数料徴求データ出力ファイル名 分類:CUSTOMIZE_1356 項目:ATODORITESUU_FILE_NAME")
                     Return False
             End Select
 

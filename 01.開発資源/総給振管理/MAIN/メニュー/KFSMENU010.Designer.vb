@@ -1263,7 +1263,7 @@ Partial Class KFSMENU010
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.ClientSize = New System.Drawing.Size(784, 561)
         Me.Controls.Add(Me.lblDate)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.Label2)

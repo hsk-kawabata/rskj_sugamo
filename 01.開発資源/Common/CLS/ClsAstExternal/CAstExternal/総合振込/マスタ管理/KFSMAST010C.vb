@@ -248,10 +248,10 @@ Public Class KFSMAST010C
             End If
             '2016/01/11 タスク）斎藤 RSV2金バッチ対応 ADD ---------------------------------------- END
             '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- START
-            INI_KIHONBAITAI = CASTCommon.GetRSKJIni("CUSTOMIZE_1358", "KIHONTESUU_BAITAI_CODE")
+            INI_KIHONBAITAI = CASTCommon.GetRSKJIni("CUSTOMIZE_1356", "KIHONTESUU_BAITAI_CODE")
             If INI_KIHONBAITAI = "err" Then
-                MessageBox.Show(String.Format(MSG0001E, "基本料金徴求媒体", "CUSTOMIZE_1358", "KIHONTESUU_BAITAI_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求媒体 分類:CUSTOMIZE_1358 項目:KIHONTESUU_BAITAI_CODE")
+                MessageBox.Show(String.Format(MSG0001E, "基本料金徴求媒体", "CUSTOMIZE_1356", "KIHONTESUU_BAITAI_CODE"), msgTitle, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MainLOG.Write(LW.UserID, LW.ToriCode, LW.FuriDate, "設定ファイル取得", "失敗", "項目名:基本料金徴求媒体 分類:CUSTOMIZE_1356 項目:KIHONTESUU_BAITAI_CODE")
                 Return False
             End If
             '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- END
@@ -3473,6 +3473,13 @@ Public Class KFSMAST010C
                 Return Index
             End If
 
+            '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- START
+            Index = CheckMutualRelation_015(MSG)
+            If Not Index = -1 Then
+                Return Index
+            End If
+            '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- END
+
             Return 0
         Catch ex As Exception
             Return -9
@@ -4726,6 +4733,88 @@ Public Class KFSMAST010C
         Return Index
     End Function
 
+    '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- START
+    Private Function CheckMutualRelation_015(ByRef MSG As String) As Integer
+
+        '項目基本配列位置
+        Dim Index As Integer = 0
+        Dim MsgIcon As MessageBoxIcon = MessageBoxIcon.Error
+
+        Dim SQL As New StringBuilder(128)
+        Dim REC As OracleDataReader = Nothing
+        Try
+            '取引先コード(主／副)
+            Dim TORI_CODE As String = sTORI(GetIndex("TORIS_CODE_T"), 4)
+            TORI_CODE &= sTORI(GetIndex("TORIF_CODE_T"), 4)
+
+            '委託者コード
+            Dim ITAKUIndex As Integer = GetIndex("ITAKU_CODE_T")
+            Dim ITAKU_CODE As String = sTORI(ITAKUIndex, 4)
+
+            '媒体コード
+            Dim BAITAIIndex As Integer = GetIndex("BAITAI_CODE_T")
+            Dim BAITAI_CODE As String = sTORI(BAITAIIndex, 4)
+
+            '基本料金区分(予備7)
+            Dim KIHONIndex As Integer = GetIndex("YOBI7_T")
+            Dim KIHON_KBN As String = sTORI(KIHONIndex, 4)
+
+
+            If KIHON_KBN <> "0" Then
+                '委託者コードチェック
+                SQL.AppendLine("SELECT COUNT(*) COUNTER FROM S_TORIMAST")
+                SQL.AppendLine(" WHERE ITAKU_CODE_T = " & SQ(ITAKU_CODE))
+                SQL.AppendLine(" AND YOBI7_T <> '0'")                                       '基本料金徴求あり
+                SQL.AppendLine(" AND NOT TORIS_CODE_T||TORIF_CODE_T = " & SQ(TORI_CODE))
+
+                If GCom.SetDynaset(SQL.ToString, REC) AndAlso
+                        REC.Read AndAlso GCom.NzDec(REC.Item("COUNTER"), 0) > 0 Then
+                    Index = KIHONIndex
+
+                    If MessageBox.Show(CUST_MSG0016W, msgTitle,
+                        MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.Cancel Then
+                        ErrMsgFlg = False
+                        Return Index
+                    End If
+
+                End If
+                If Not REC Is Nothing Then
+                    REC.Close()
+                    REC.Dispose()
+                End If
+
+                '媒体コードチェック
+                If INI_KIHONBAITAI.IndexOf(BAITAI_CODE) < 0 Then
+                    Index = KIHONIndex
+
+                    If MessageBox.Show(String.Format(CUST_MSG0017W, "基本料金区分"), msgTitle,
+                        MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.Cancel Then
+                        ErrMsgFlg = False
+                        Return Index
+                    End If
+                End If
+                If Not REC Is Nothing Then
+                    REC.Close()
+                    REC.Dispose()
+                End If
+            End If
+            Return -1
+        Catch ex As Exception
+            If MsgIcon = MessageBoxIcon.Error Then
+
+            End If
+            MSG = ex.Message
+        Finally
+            If Not REC Is Nothing Then
+                REC.Close()
+                REC.Dispose()
+            End If
+        End Try
+
+        Return Index
+    End Function
+    '2017/12/28 FJH）向井 ADD 青梅信金(基本料金関連チェック) ---------------------------------------- START
+
     '
     ' 機　能 : テキストボックス名で対のラベルオブジェクトを返す
     '
@@ -4750,6 +4839,10 @@ Public Class KFSMAST010C
                     Return TESUUTYO_SIT_TL
                 Case "TORIMATOME_SIT_T".ToUpper
                     Return TORIMATOME_SIT_TL
+                    '2017/09/11 タスク）日比野 ADD 青梅信金(UI.5-2<PG>) ---------------------------------------- START
+                Case "YOBI8_T".ToUpper
+                    Return YOBI8_TL
+                    '2017/09/11 タスク）日比野 ADD 青梅信金(UI.5-2<PG>) ---------------------------------------- END
                 Case Else
                     Return Nothing
             End Select
@@ -4954,8 +5047,13 @@ Public Class KFSMAST010C
                                     '金融機関
                                     oTORI(Index).Text = sTORI(Index, 3)
                                     GetLabel(sTORI(Index, 1)).Text = GCom.GetBKBRName(sTORI(Index, 3), "", 30)
-                                Case "TSIT_NO_T", "TUKESIT_NO_T", "TESUUTYO_SIT_T", _
-                                     "TORIMATOME_SIT_T"
+                                    '2017/09/11 タスク）日比野 CHG 青梅信金(UI.5-2<PG>) ---------------------------------------- START
+                                    'Case "TSIT_NO_T", "TUKESIT_NO_T", "TESUUTYO_SIT_T", _
+                                    '     "TORIMATOME_SIT_T"
+                                Case "TSIT_NO_T", "TUKESIT_NO_T", "TESUUTYO_SIT_T",
+                                     "TORIMATOME_SIT_T",
+                                     "YOBI8_T"                                                  'YOBI8_T:基本料金徴求支店
+                                    '2017/09/11 タスク）日比野 CHG 青梅信金(UI.5-2<PG>) ---------------------------------------- END
                                     '支店
                                     oTORI(Index).Text = sTORI(Index, 3)
                                     Dim BKCode As String = ""
@@ -5472,14 +5570,14 @@ Public Class KFSMAST010C
     End Sub
     '数値評価してZERO埋めする
     Private Sub FMT_NzNumberString_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) _
-            Handles TORIS_CODE_T.Validating, TORIF_CODE_T.Validating, ITAKU_KANRI_CODE_T.Validating, ITAKU_CODE_T.Validating, _
-                    TKIN_NO_T.Validating, TSIT_NO_T.Validating, KOUZA_T.Validating, _
-                    KANREN_KIGYO_CODE_T.Validating, KEIYAKU_DATE_T.Validating, KEIYAKU_DATE_T1.Validating, KEIYAKU_DATE_T2.Validating, _
-                    KAISI_DATE_T.Validating, KAISI_DATE_T1.Validating, KAISI_DATE_T2.Validating, SYURYOU_DATE_T.Validating, _
-                    SYURYOU_DATE_T1.Validating, SYURYOU_DATE_T2.Validating, TORIMATOME_SIT_T.Validating, HONBU_KOUZA_T.Validating, _
-                    TUKEKIN_NO_T.Validating, TUKESIT_NO_T.Validating, TESUUTYO_SIT_T.Validating, _
-                    TESUUTYO_KOUZA_T.Validating, TESUUMAT_NO_T.Validating, TUKEKIN_NO_T.Validating, TUKEKOUZA_T.Validating, _
-                    FURI_CODE_T.Validating, KIGYO_CODE_T.Validating
+            Handles TORIS_CODE_T.Validating, TORIF_CODE_T.Validating, ITAKU_KANRI_CODE_T.Validating, ITAKU_CODE_T.Validating,
+                    TKIN_NO_T.Validating, TSIT_NO_T.Validating, KOUZA_T.Validating,
+                    KANREN_KIGYO_CODE_T.Validating, KEIYAKU_DATE_T.Validating, KEIYAKU_DATE_T1.Validating, KEIYAKU_DATE_T2.Validating,
+                    KAISI_DATE_T.Validating, KAISI_DATE_T1.Validating, KAISI_DATE_T2.Validating, SYURYOU_DATE_T.Validating,
+                    SYURYOU_DATE_T1.Validating, SYURYOU_DATE_T2.Validating, TORIMATOME_SIT_T.Validating, HONBU_KOUZA_T.Validating,
+                    TUKEKIN_NO_T.Validating, TUKESIT_NO_T.Validating, TESUUTYO_SIT_T.Validating,
+                    TESUUTYO_KOUZA_T.Validating, TESUUMAT_NO_T.Validating, TUKEKIN_NO_T.Validating, TUKEKOUZA_T.Validating,
+                    FURI_CODE_T.Validating, KIGYO_CODE_T.Validating, YOBI8_T.Validating, YOBI10_T.Validating
         Try
             Call GCom.NzNumberString(CType(sender, TextBox), True)
         Catch ex As Exception
@@ -5510,7 +5608,7 @@ Public Class KFSMAST010C
     End Sub
 
     '数値評価(Zero埋めフォーマット有り：金融機関登録エリア：支店の場合)
-    Private Sub Branch_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TSIT_NO_T.Validating, TUKESIT_NO_T.Validating, TESUUTYO_SIT_T.Validating, TORIMATOME_SIT_T.Validating
+    Private Sub Branch_Validating(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles TSIT_NO_T.Validating, TUKESIT_NO_T.Validating, TESUUTYO_SIT_T.Validating, TORIMATOME_SIT_T.Validating, YOBI8_T.Validating
 
         Dim OBJ As TextBox = CType(sender, TextBox)
         Dim Temp As String = GCom.NzDec(OBJ.Text, "")
@@ -5627,7 +5725,7 @@ Public Class KFSMAST010C
     'タブ間のフォーカス移動
     ' 2017/11/10 タスク）西野 CHG (標準版不具合対応(№171)) -------------------- START
     Private Sub TabIndexSetFocus_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) _
-        Handles YUUBIN_NNAME_T.KeyPress, PRTNUM_T.KeyPress, TESUU_TABLE_ID_T.KeyPress, ENC_KEY2_T.KeyPress
+        Handles YUUBIN_NNAME_T.KeyPress, PRTNUM_T.KeyPress, TESUU_TABLE_ID_T.KeyPress, ENC_KEY2_T.KeyPress, YOBI10_T.KeyPress
         'Private Sub TabIndexSetFocus_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles YUUBIN_NNAME_T.KeyPress, TESUU_TABLE_ID_T.KeyPress, ENC_KEY2_T.KeyPress
         ' 2017/11/10 タスク）西野 CHG (標準版不具合対応(№171)) -------------------- END
         Try
@@ -5652,8 +5750,15 @@ Public Class KFSMAST010C
                                 .SelectedIndex = 3
                                 Me.ENC_KBN_T.Focus()
                             Case "ENC_KEY2_T"
+                                '2017/09/11 タスク）日比野 ADD 青梅信金(UI.5-2<PG>) ---------------------------------------- START
+                                '.SelectedIndex = 0
+                                'Me.BAITAI_CODE_T.Focus()
+                                .SelectedIndex = 4
+                                Me.YOBI7_T.Focus()
+                            Case "YOBI10_T"
                                 .SelectedIndex = 0
                                 Me.BAITAI_CODE_T.Focus()
+                                '2017/09/11 タスク）日比野 ADD 青梅信金(UI.5-2<PG>) ---------------------------------------- END
                         End Select
                     End With
             End Select

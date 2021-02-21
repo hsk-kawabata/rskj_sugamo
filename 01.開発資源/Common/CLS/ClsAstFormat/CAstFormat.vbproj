@@ -78,11 +78,6 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAstExternal, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DLL\CAstExternal.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -175,22 +170,22 @@
     <ProjectReference Include="..\ClsAstBatch\CAstBatch.vbproj">
       <Project>{d53fbd0e-8249-4c52-a6e1-11c87e33514e}</Project>
       <Name>CAstBatch</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\ClsAstCommon\CAstCommon.vbproj">
       <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
       <Name>CAstCommon</Name>
-      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ClsAstExternal\CAstExternal\CAstExternal.vbproj">
+      <Project>{8c826383-cb9f-4e67-a931-c1d3040280f1}</Project>
+      <Name>CAstExternal</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClsAstFormatMini\CAstFormatMini.vbproj">
       <Project>{7fba9dd1-84a3-48ed-9589-9d7ea98f07da}</Project>
       <Name>CAstFormatMini</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\clsFUSION\clsFUSION.vbproj">
       <Project>{6fa2fc84-8752-4ac8-baa4-7ad6c6b34bcc}</Project>
       <Name>clsFUSION</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

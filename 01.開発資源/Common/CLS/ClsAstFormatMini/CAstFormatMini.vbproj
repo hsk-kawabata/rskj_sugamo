@@ -77,11 +77,6 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAstExternal, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\DLL\CAstExternal.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
@@ -125,12 +120,14 @@
     <ProjectReference Include="..\ClsAstCommon\CAstCommon.vbproj">
       <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
       <Name>CAstCommon</Name>
-      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ClsAstExternal\CAstExternal\CAstExternal.vbproj">
+      <Project>{8c826383-cb9f-4e67-a931-c1d3040280f1}</Project>
+      <Name>CAstExternal</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClsMenteCommon\MenteCommon.vbproj">
       <Project>{a6cd2636-8d88-4bac-9960-7c4e1497b237}</Project>
       <Name>MenteCommon</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

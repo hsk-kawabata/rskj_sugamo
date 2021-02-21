@@ -101,7 +101,6 @@
     <ProjectReference Include="..\ClsAstCommon\CAstCommon.vbproj">
       <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
       <Name>CAstCommon</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

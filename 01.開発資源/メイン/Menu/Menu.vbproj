@@ -63,16 +63,6 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CAstCommon, Version=1.0.3526.27399, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLL\CAstCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="clsMenteCommon, Version=1.0.3553.27798, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DLL\clsMenteCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -177,6 +167,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="small_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\CLS\ClsAstCommon\CAstCommon.vbproj">
+      <Project>{7ba267bd-8ba6-4eba-8b20-b88e8e7e34d7}</Project>
+      <Name>CAstCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\CLS\ClsMenteCommon\MenteCommon.vbproj">
+      <Project>{a6cd2636-8d88-4bac-9960-7c4e1497b237}</Project>
+      <Name>MenteCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
