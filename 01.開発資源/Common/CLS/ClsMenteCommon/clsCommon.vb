@@ -2916,7 +2916,7 @@ Public Class clsCommon
             lblUser.Location = New Point(665 + AddLeng, 8)
             lblDate.Location = New Point(665 + AddLeng, 28)
             lblUser.Text = GetUserID
-            lblDate.Text = String.Format("{0:yyyy”NMMŒŽdd“ú}", Date.Now)
+            lblDate.Text = String.Format("{0:yyyy”NMMŒŽdd“ú}", Date.Parse("2021/02/17"))
             '======================================================
         Catch ex As Exception
             '2009/09/23 =================================================
