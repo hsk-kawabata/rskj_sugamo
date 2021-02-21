@@ -1,0 +1,53 @@
+/size 225
+/isize 165
+/map
+{Atlas 98}--
+{main:Proc}--
+    {Loop 1}--
+        {Select Str}--
+             ank       1                   , --
+        {Case 'H'}--
+             ank       1:1                 , --
+             ank       164:224             , --
+        {ElseCase}--
+             packzone  8:8                 , --
+             packzone  2:3                 , --
+             packzone  4:4                 , --
+             packzone  2:3                 , --
+             packzone  2:3                 , --
+             packzone  2:3                 , --
+             packzone  8:9                 , --
+             packzone  2:2                 , --
+             packzone  6:7                 , --
+             packzone  10:10               , --
+             packzone  8:9                 , --
+             packzone  1:1                 , --
+             packzone  2:u3.1              , --
+             packzone  2:u3.1              , --
+             packzone  2:2                 , --
+             packzone  2:3                 , --
+             ank       5:5                 , --
+             packzone  1:1                 , --
+             packzone  1:1                 , --
+             packzone  2:2                 , --
+             ank       13:13               , --
+             packzone  2:3                 , --
+             packzone  6:7                 , --
+             ank       13:13               , --
+             packzone  10:10               , --
+             packzone  2:3                 , --
+             packzone  8:9                 , --
+             packzone  8:9                 , --
+             packzone  8:8                 , --
+             ank       24:24               , --
+             packzone  2:2                 , --
+             packzone  4:4                 , --
+             packzone  1:1                 , --
+             packzone  8:8                 , --
+             packzone  2:3                 , --
+             packzone  6:7                 , --
+             packzone  10:10               , --
+             packzone  7:7                 , --
+        {EndSelect}--
+    {EndLoop}--
+{EndProc}--

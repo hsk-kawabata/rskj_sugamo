@@ -1,0 +1,37 @@
+/size 313
+/isize 200
+/map
+    ank      4:4    
+    ank      3:3    
+    ank      2:2    
+    ank      3:3    
+    ank      3:3    
+    ank      3:3    
+    ank      40:40  
+    pack     s8:8   
+    pack     s8:8   
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s7:7   
+    pack     s7:7   
+    pack     s13:13 
+    pack     s7:7   
+    pack     s13:13 
+    ank      3:3

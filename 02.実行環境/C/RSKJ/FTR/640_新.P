@@ -1,0 +1,21 @@
+/size 640
+/isize 640
+/map
+{Atlas 98}--
+{main:Proc}--
+    {Loop 1}--
+        {Select Bin}--
+            @88  binary    1:1                 , --
+        {Case x'F1'}--
+                 ank       640:640             , --
+        {Case x'F2'}--
+                 ank       640:640             , --
+        {Case x'F8'}--
+                 ank       640:640             , --
+        {Case x'F9'}--
+                 ank       640:640             , --
+        {ElseCase}--
+            {Quit RecSkip,Continue,0}--
+        {EndSelect}--
+    {EndLoop}--
+{EndProc}--

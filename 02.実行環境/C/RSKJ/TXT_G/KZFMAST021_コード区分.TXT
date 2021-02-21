@@ -1,0 +1,3 @@
+0,JIS
+1,JIS‰ü—L(120)
+4,EBCDIC

@@ -1,0 +1,19 @@
+/size 128
+/isize 128
+/map
+{Atlas 98}--
+{main:Proc}--
+    {Loop 1}--
+        {Select Str}--
+            @7  ank      1                   , --
+        {Case '0'}--
+                ank      128:128             , --
+        {Case '2'}--
+                ank      80:80               , --
+                kanji    12:12               , --
+                ank      36:36               , --
+        {Case '9'}--
+                ank      128:128             , --
+        {EndSelect}--
+    {EndLoop}--
+{EndProc}--

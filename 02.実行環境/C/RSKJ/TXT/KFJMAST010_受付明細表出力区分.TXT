@@ -1,0 +1,5 @@
+0, 未出力,S
+1, 出力(店番ソート),S,3.10sjia 4.2sjia 15.4sjia 17.3sjia 25.6sjia
+2, 出力(非ソート),S
+3, 出力(エラー分のみ),E
+4, 出力(店番・口座ソート),S,3.10sjia 4.2sjia 15.4sjia 17.3sjia 19.2sjia 20.7sjia 25.6sjia

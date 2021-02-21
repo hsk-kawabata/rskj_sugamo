@@ -1,0 +1,6 @@
+/size 164
+/isize 164
+/map
+ ank      78:78               , --
+ kanji    12:12               , --
+ ank      74:74                 --

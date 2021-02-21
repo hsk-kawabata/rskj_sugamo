@@ -1,0 +1,4 @@
+/size 400
+/isize 400
+/map
+ ank      400:400   
